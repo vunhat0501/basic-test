@@ -11,15 +11,42 @@
             <h1>Ôn Tập TTHCM</h1>
 
             <div id="quiz-container" class="card">
-                <h2 id="question-text">Đang tải câu hỏi...</h2>
+                <div class="header-flex">
+                    <h2 id="question-text">Đang tải câu hỏi...</h2>
+                </div>
+
                 <div id="options-container"></div>
-                <button id="next-btn" class="hidden">Câu tiếp theo</button>
+
+                <div class="action-buttons">
+                    <button id="prev-btn" class="secondary-btn hidden">
+                        Câu trước
+                    </button>
+                    <button id="next-btn" class="primary-btn hidden">
+                        Câu tiếp theo
+                    </button>
+                    <button id="finish-btn" class="primary-btn hidden">
+                        Xem kết quả
+                    </button>
+                </div>
             </div>
 
             <div id="result-container" class="card hidden">
                 <h2>Kết quả của bạn</h2>
                 <p id="score-text"></p>
-                <button id="restart-btn">Làm lại từ đầu</button>
+                <button id="review-btn" class="secondary-btn">
+                    Xem lại bài làm
+                </button>
+                <button id="restart-btn" class="danger-btn">
+                    Reset toàn bộ bài
+                </button>
+            </div>
+
+            <div id="nav-container" class="card">
+                <h3>Danh sách câu hỏi</h3>
+                <div id="question-grid"></div>
+                <button id="reset-all-btn" class="danger-btn mt-2">
+                    Xóa toàn bộ dữ liệu & Làm lại
+                </button>
             </div>
         </div>
 
