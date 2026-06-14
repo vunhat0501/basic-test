@@ -3,16 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ôn tập</title>
+        <title>Hệ thống Ôn tập Cloud & DevOps</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="app-container">
-            <h1>Ôn Tập</h1>
+            <h1>Hệ thống Ôn Tập</h1>
 
-            <div id="quiz-container" class="card">
+            <div class="exam-selector-container card">
+                <label for="exam-select"><strong>Chọn Đề Thi: </strong></label>
+                <select id="exam-select">
+                    <option value="">Đang tải dữ liệu...</option>
+                </select>
+            </div>
+
+            <div id="quiz-container" class="card hidden">
                 <div class="header-flex">
                     <h2 id="question-text">Đang tải câu hỏi...</h2>
+                    <p id="multi-answer-hint" class="hint-text hidden"></p>
                 </div>
 
                 <div id="options-container"></div>
@@ -20,6 +28,9 @@
                 <div class="action-buttons">
                     <button id="prev-btn" class="secondary-btn hidden">
                         Câu trước
+                    </button>
+                    <button id="check-btn" class="warning-btn">
+                        Chốt đáp án
                     </button>
                     <button id="next-btn" class="primary-btn hidden">
                         Câu tiếp theo
@@ -37,16 +48,20 @@
                     Xem lại bài làm
                 </button>
                 <button id="restart-btn" class="danger-btn">
-                    Reset toàn bộ bài
+                    Reset đề này
                 </button>
             </div>
 
-            <div id="nav-container" class="card">
-                <h3>Danh sách câu hỏi</h3>
-                <div id="question-grid"></div>
-                <button id="reset-all-btn" class="danger-btn mt-2">
-                    Xóa toàn bộ dữ liệu & Làm lại
+            <div id="nav-container" class="card hidden">
+                <button id="toggle-grid-btn" class="secondary-btn toggle-btn">
+                    ▼ Hiển thị / Ẩn danh sách câu hỏi
                 </button>
+                <div id="grid-wrapper" class="hidden">
+                    <div id="question-grid"></div>
+                    <button id="reset-all-btn" class="danger-btn mt-2">
+                        Xóa toàn bộ dữ liệu máy
+                    </button>
+                </div>
             </div>
         </div>
 

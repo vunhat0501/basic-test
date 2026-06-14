@@ -1,150 +1,196 @@
+const examSelect = document.getElementById("exam-select");
 const questionText = document.getElementById("question-text");
+const multiHint = document.getElementById("multi-answer-hint");
 const optionsContainer = document.getElementById("options-container");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
+const checkBtn = document.getElementById("check-btn");
 const finishBtn = document.getElementById("finish-btn");
 const quizContainer = document.getElementById("quiz-container");
 const resultContainer = document.getElementById("result-container");
+const navContainer = document.getElementById("nav-container");
 const scoreText = document.getElementById("score-text");
 const questionGrid = document.getElementById("question-grid");
+const toggleGridBtn = document.getElementById("toggle-grid-btn");
+const gridWrapper = document.getElementById("grid-wrapper");
 
+let allExams = [];
+let currentExam = null;
 let currentQuestionIndex = 0;
-let quizData = [];
-// Lưu trữ câu trả lời: object { selected: number, isCorrect: boolean } theo index
+
+// Cấu trúc lưu trữ: { "exam_id": { "question_index": { selected: [0, 2], isCorrect: false } } }
 let userAnswers = {};
 
-async function loadQuizData() {
+async function loadData() {
     try {
         const response = await fetch("data.json");
-        quizData = await response.json();
-        initQuiz();
+        allExams = await response.json();
+
+        // Nạp dữ liệu vào Dropdown
+        examSelect.innerHTML = '<option value="">-- Chọn đề thi --</option>';
+        allExams.forEach((exam) => {
+            const option = document.createElement("option");
+            option.value = exam.id;
+            option.textContent = `${exam.title} (${exam.questions.length} câu)`;
+            examSelect.appendChild(option);
+        });
+
+        // Khôi phục bộ nhớ cục bộ
+        const savedData = localStorage.getItem("devops_quiz_answers");
+        if (savedData) userAnswers = JSON.parse(savedData);
+
+        examSelect.addEventListener("change", (e) => {
+            if (e.target.value) {
+                switchExam(e.target.value);
+            } else {
+                quizContainer.classList.add("hidden");
+                navContainer.classList.add("hidden");
+            }
+        });
     } catch (error) {
-        questionText.innerText =
-            "Lỗi tải dữ liệu. Bạn nhớ mở bằng Live Server nhé.";
+        examSelect.innerHTML =
+            "<option>Lỗi tải dữ liệu. Hãy dùng Live Server.</option>";
         console.error("Error loading JSON:", error);
     }
 }
 
-function initQuiz() {
-    // Phục hồi dữ liệu từ LocalStorage
-    const savedAnswers = localStorage.getItem("tthcm_answers");
-    const savedIndex = localStorage.getItem("tthcm_index");
+function switchExam(examId) {
+    currentExam = allExams.find((e) => e.id === examId);
+    if (!userAnswers[examId]) userAnswers[examId] = {};
 
-    if (savedAnswers) userAnswers = JSON.parse(savedAnswers);
-    if (savedIndex) currentQuestionIndex = parseInt(savedIndex);
+    // Tìm câu hỏi chưa làm tiếp theo, hoặc bắt đầu từ 0
+    let lastIndex = parseInt(localStorage.getItem(`last_index_${examId}`)) || 0;
+    currentQuestionIndex = lastIndex;
+
+    quizContainer.classList.remove("hidden");
+    navContainer.classList.remove("hidden");
+    resultContainer.classList.add("hidden");
 
     renderNavGrid();
     showQuestion();
 }
 
 function showQuestion() {
-    quizContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
-    resetState();
+    quizContainer.classList.remove("hidden");
+    optionsContainer.innerHTML = "";
 
-    const currentQuestion = quizData[currentQuestionIndex];
-    questionText.innerText = currentQuestion.question;
+    const qData = currentExam.questions[currentQuestionIndex];
+    questionText.innerText = qData.question;
 
-    const answeredData = userAnswers[currentQuestionIndex]; // Kiểm tra xem câu này làm chưa
+    // Hiển thị gợi ý nếu có nhiều đáp án
+    const correctCount = qData.answer.length;
+    if (correctCount > 1) {
+        multiHint.innerText = `(Vui lòng chọn ${correctCount} đáp án)`;
+        multiHint.classList.remove("hidden");
+    } else {
+        multiHint.classList.add("hidden");
+    }
 
-    currentQuestion.options.forEach((option, index) => {
+    const answeredData = userAnswers[currentExam.id][currentQuestionIndex];
+
+    qData.options.forEach((option, index) => {
         const button = document.createElement("button");
         button.innerText = option;
         button.classList.add("option-btn");
         button.dataset.index = index;
 
-        // Nếu câu hỏi đã được trả lời trước đó
         if (answeredData) {
             button.disabled = true;
-            if (index === currentQuestion.answer) {
-                button.classList.add("correct"); // Luôn bôi xanh đáp án đúng
-            } else if (
-                index === answeredData.selected &&
-                !answeredData.isCorrect
+            // Hiển thị mọi đáp án đúng
+            if (qData.answer.includes(index)) {
+                button.classList.add("correct");
+            }
+            // Bôi đỏ nếu người dùng chọn sai
+            if (
+                answeredData.selected.includes(index) &&
+                !qData.answer.includes(index)
             ) {
-                button.classList.add("wrong"); // Bôi đỏ nếu chọn sai
+                button.classList.add("wrong");
             }
         } else {
-            button.addEventListener("click", selectAnswer);
+            button.addEventListener("click", () =>
+                toggleOption(button, correctCount > 1),
+            );
         }
-
         optionsContainer.appendChild(button);
     });
 
     updateNavigationButtons();
     updateGridActiveState();
+
+    // Lưu vị trí câu hỏi hiện tại cho đề này
+    localStorage.setItem(`last_index_${currentExam.id}`, currentQuestionIndex);
 }
 
-function selectAnswer(e) {
-    const selectedBtn = e.target;
-    const selectedIndex = parseInt(selectedBtn.dataset.index);
-    const correctIndex = quizData[currentQuestionIndex].answer;
-    const isCorrect = selectedIndex === correctIndex;
+function toggleOption(btn, isMulti) {
+    if (!isMulti) {
+        // Nếu chỉ chọn 1, bỏ chọn các nút khác
+        Array.from(optionsContainer.children).forEach((b) =>
+            b.classList.remove("selected"),
+        );
+    }
+    btn.classList.toggle("selected");
+    updateNavigationButtons();
+}
 
-    // Lưu vào bộ nhớ tạm
-    userAnswers[currentQuestionIndex] = {
-        selected: selectedIndex,
+function checkAnswer() {
+    const selectedBtns = Array.from(
+        optionsContainer.querySelectorAll(".selected"),
+    );
+    if (selectedBtns.length === 0) return;
+
+    const selectedIndices = selectedBtns.map((b) => parseInt(b.dataset.index));
+    const correctIndices = currentExam.questions[currentQuestionIndex].answer;
+
+    // Kiểm tra đúng/sai (so sánh 2 mảng)
+    const isCorrect =
+        selectedIndices.length === correctIndices.length &&
+        selectedIndices.every((val) => correctIndices.includes(val));
+
+    userAnswers[currentExam.id][currentQuestionIndex] = {
+        selected: selectedIndices,
         isCorrect: isCorrect,
     };
     saveProgress();
-
-    if (isCorrect) {
-        selectedBtn.classList.add("correct");
-    } else {
-        selectedBtn.classList.add("wrong");
-        optionsContainer.children[correctIndex].classList.add("correct");
-    }
-
-    // Vô hiệu hóa các nút
-    Array.from(optionsContainer.children).forEach(
-        (button) => (button.disabled = true),
-    );
-
-    updateNavigationButtons();
-    renderNavGrid(); // Cập nhật lại màu sắc trong lưới
+    showQuestion(); // Render lại để khóa nút và bôi màu
+    renderNavGrid();
 }
 
 function updateNavigationButtons() {
-    // Nút Previous
-    if (currentQuestionIndex > 0) {
-        prevBtn.classList.remove("hidden");
-    } else {
-        prevBtn.classList.add("hidden");
-    }
+    const answered = !!userAnswers[currentExam.id][currentQuestionIndex];
+    const hasSelection =
+        optionsContainer.querySelectorAll(".selected").length > 0;
 
-    // Nút Next / Finish
-    nextBtn.classList.add("hidden");
-    finishBtn.classList.add("hidden");
+    prevBtn.classList.toggle("hidden", currentQuestionIndex === 0);
 
-    if (currentQuestionIndex < quizData.length - 1) {
-        // Chỉ hiện Next khi đã trả lời xong câu hiện tại
-        if (userAnswers[currentQuestionIndex]) {
+    if (answered) {
+        checkBtn.classList.add("hidden");
+        if (currentQuestionIndex < currentExam.questions.length - 1) {
             nextBtn.classList.remove("hidden");
-        }
-    } else {
-        // Câu cuối cùng -> Hiện xem kết quả
-        if (userAnswers[currentQuestionIndex]) {
+            finishBtn.classList.add("hidden");
+        } else {
+            nextBtn.classList.add("hidden");
             finishBtn.classList.remove("hidden");
         }
+    } else {
+        checkBtn.classList.remove("hidden");
+        checkBtn.disabled = !hasSelection;
+        checkBtn.style.opacity = hasSelection ? "1" : "0.5";
+        nextBtn.classList.add("hidden");
+        finishBtn.classList.add("hidden");
     }
 }
 
-function resetState() {
-    while (optionsContainer.firstChild) {
-        optionsContainer.removeChild(optionsContainer.firstChild);
-    }
-}
+checkBtn.addEventListener("click", checkAnswer);
 
-// Chuyển câu hỏi
 prevBtn.addEventListener("click", () => {
     currentQuestionIndex--;
-    saveProgress();
     showQuestion();
 });
 
 nextBtn.addEventListener("click", () => {
     currentQuestionIndex++;
-    saveProgress();
     showQuestion();
 });
 
@@ -154,14 +200,15 @@ function showResult() {
     quizContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
 
-    // Tính điểm
     let score = 0;
-    let answeredCount = Object.keys(userAnswers).length;
-    for (let key in userAnswers) {
-        if (userAnswers[key].isCorrect) score++;
+    const examAnswers = userAnswers[currentExam.id] || {};
+    const answeredCount = Object.keys(examAnswers).length;
+
+    for (let key in examAnswers) {
+        if (examAnswers[key].isCorrect) score++;
     }
 
-    scoreText.innerHTML = `Bạn đã trả lời đúng <strong>${score}</strong> / ${quizData.length} câu.<br><small>(Đã làm ${answeredCount}/${quizData.length} câu)</small>`;
+    scoreText.innerHTML = `Bạn đã đúng <strong>${score}</strong> / ${currentExam.questions.length} câu.<br><small>(Đã làm ${answeredCount} câu)</small>`;
 }
 
 document.getElementById("review-btn").addEventListener("click", () => {
@@ -169,24 +216,25 @@ document.getElementById("review-btn").addEventListener("click", () => {
     showQuestion();
 });
 
-// Xử lý Lưới điều hướng (Grid)
+// Grid điều hướng
 function renderNavGrid() {
     questionGrid.innerHTML = "";
-    quizData.forEach((_, index) => {
+    const examAnswers = userAnswers[currentExam.id] || {};
+
+    currentExam.questions.forEach((_, index) => {
         const btn = document.createElement("button");
         btn.innerText = index + 1;
         btn.classList.add("grid-btn");
 
-        // Tô màu theo kết quả
-        const ans = userAnswers[index];
+        const ans = examAnswers[index];
         if (ans) {
-            if (ans.isCorrect) btn.classList.add("answered-correct");
-            else btn.classList.add("answered-wrong");
+            btn.classList.add(
+                ans.isCorrect ? "answered-correct" : "answered-wrong",
+            );
         }
 
         btn.addEventListener("click", () => {
             currentQuestionIndex = index;
-            saveProgress();
             showQuestion();
         });
 
@@ -196,42 +244,57 @@ function renderNavGrid() {
 }
 
 function updateGridActiveState() {
-    const buttons = questionGrid.children;
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-        if (i === currentQuestionIndex) {
-            buttons[i].classList.add("active");
-            // Cuộn tự động tới câu đó trong lưới
-            buttons[i].scrollIntoView({ behavior: "smooth", block: "nearest" });
+    Array.from(questionGrid.children).forEach((btn, i) => {
+        btn.classList.toggle("active", i === currentQuestionIndex);
+        if (
+            i === currentQuestionIndex &&
+            !gridWrapper.classList.contains("hidden")
+        ) {
+            btn.scrollIntoView({ behavior: "smooth", block: "nearest" });
         }
-    }
+    });
 }
+
+// Toggle ẩn/hiện lưới câu hỏi
+toggleGridBtn.addEventListener("click", () => {
+    gridWrapper.classList.toggle("hidden");
+    if (!gridWrapper.classList.contains("hidden")) {
+        toggleGridBtn.innerText = "▲ Ẩn danh sách câu hỏi";
+        updateGridActiveState(); // Scroll tời câu hiện tại
+    } else {
+        toggleGridBtn.innerText = "▼ Hiển thị danh sách câu hỏi";
+    }
+});
 
 // Lưu / Xóa dữ liệu
 function saveProgress() {
-    localStorage.setItem("tthcm_answers", JSON.stringify(userAnswers));
-    localStorage.setItem("tthcm_index", currentQuestionIndex.toString());
+    localStorage.setItem("devops_quiz_answers", JSON.stringify(userAnswers));
+}
+
+function resetCurrentExam() {
+    if (confirm("Reset toàn bộ kết quả của ĐỀ NÀY?")) {
+        userAnswers[currentExam.id] = {};
+        saveProgress();
+        currentQuestionIndex = 0;
+        showQuestion();
+        renderNavGrid();
+    }
 }
 
 function resetAllData() {
-    if (
-        confirm(
-            "Bạn có chắc chắn muốn xóa toàn bộ tiến độ làm bài không? Hành động này không thể hoàn tác.",
-        )
-    ) {
-        localStorage.removeItem("tthcm_answers");
-        localStorage.removeItem("tthcm_index");
+    if (confirm("Xóa TOÀN BỘ dữ liệu của mọi đề thi?")) {
+        localStorage.removeItem("devops_quiz_answers");
         userAnswers = {};
-        currentQuestionIndex = 0;
-        renderNavGrid();
-        showQuestion();
+        switchExam(currentExam.id);
     }
 }
 
 document
+    .getElementById("restart-btn")
+    .addEventListener("click", resetCurrentExam);
+document
     .getElementById("reset-all-btn")
     .addEventListener("click", resetAllData);
-document.getElementById("restart-btn").addEventListener("click", resetAllData);
 
-// Bắt đầu tải dữ liệu
-loadQuizData();
+// Khởi chạy
+loadData();
