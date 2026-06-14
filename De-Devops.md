@@ -666,8 +666,8 @@ C. AWS Snowball - Thiết bị truyền dữ liệu vật lý AWS Snowball
 D. S3 Cross-Region Replication (CRR) - Tính năng sao chép dữ liệu Amazon S3 giữa các Region
 
 Question 7: Under the AWS shared responsibility model, which actions are the responsibility of AWS? (Select TWO.)
-*A. Scanning AWS service endpoints for vulnerabilities. - Quét các endpoint dịch vụ AWS để phát hiện lỗ hổng bảo mật.
-*B. Enforcing application access restrictions. - Thực thi các giới hạn truy cập của ứng dụng.
+_A. Scanning AWS service endpoints for vulnerabilities. - Quét các endpoint dịch vụ AWS để phát hiện lỗ hổng bảo mật._
+B. Enforcing application access restrictions. - Thực thi các giới hạn truy cập của ứng dụng.
 _C. Encrypting traffic on the AWS backbone between global and regional AWS facilities. - Mã hóa lưu lượng trên mạng backbone của AWS giữa các cơ sở toàn cầu và khu vực của AWS._
 D. Enabling encryption on an Amazon S3 bucket. - Bật mã hóa cho một bucket Amazon S3.
 E. Configuring security group rules. - Cấu hình các quy tắc security group.
