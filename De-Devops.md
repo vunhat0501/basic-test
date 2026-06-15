@@ -1699,9 +1699,9 @@ _D. Hybrid Cloud - Đám mây lai_
 
 Question 72: A company using a hybrid cloud would like to store secondary backup copies of the on-premises data. Which Amazon S3 Storage Class would you use for a cost-optimal yet rapid access solution?
 A. Amazon S3 Glacier Deep Archive - Amazon S3 Glacier Deep Archive
-_B. Amazon S3 Standard-Infrequent Access (S3 Standard-IA) - Amazon S3 Standard-Infrequent Access (S3 Standard-IA)_
+B. Amazon S3 Standard-Infrequent Access (S3 Standard-IA) - Amazon S3 Standard-Infrequent Access (S3 Standard-IA)
 C. Amazon S3 Standard - Amazon S3 Standard
-D. Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) - Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)
+_D. Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) - Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)_
 
 Question 73: Which AWS tool can provide best practice recommendations for performance, service limits, and cost optimization?
 A. AWS Health Dashboard - Service health
