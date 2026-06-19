@@ -32,9 +32,36 @@ def parse_standard(filepath, default_title):
 
     def save_question():
         if current_q_num is not None and current_q_text:
-            q_text = f"Câu {current_q_num}: " + " ".join(current_q_text)
+            q_text = f"Câu {current_q_num}: " + "\n".join(current_q_text)
+            
+            cleaned_options = []
+            for opt in current_options:
+                opt = opt.strip()
+                if opt.endswith('*') or opt.endswith('_'):
+                    opt = opt[:-1].strip()
+                cleaned_options.append(opt)
+            
+            # --- KIỂM TRA LỖI (VALIDATION) ---
+            is_valid = True
+            error_reasons = []
+            if len(cleaned_options) < 2:
+                is_valid = False
+                error_reasons.append("Chưa nhận diện được phương án (ít hơn 2 phương án)")
+            if len(current_answers) == 0:
+                is_valid = False
+                error_reasons.append("Không tìm thấy đáp án đúng (Thiếu dấu * hoặc _)")
+            
+            if not is_valid:
+                short_q = q_text[:80].replace('\n', ' ') + "..." if len(q_text) > 80 else q_text.replace('\n', ' ')
+                unconverted.append({
+                    "exam": current_exam_title,
+                    "question": short_q,
+                    "reasons": error_reasons
+                })
+            # ---------------------------------
+            
             ans = current_answers[0] if len(current_answers) == 1 else current_answers.copy() if len(current_answers) > 1 else -1
-            questions.append({"question": q_text, "options": current_options.copy(), "answer": ans})
+            questions.append({"question": q_text, "options": cleaned_options, "answer": ans})
 
     for line in lines:
         line = line.strip()
@@ -62,12 +89,13 @@ def parse_standard(filepath, default_title):
             opt_match = opt_pattern.match(line)
             if opt_match:
                 opt_text = opt_match.group(2).strip()
-                if opt_text.endswith('*') or opt_text.endswith('_'): opt_text = opt_text[:-1].strip()
                 current_options.append(opt_text)
                 if bool(opt_match.group(1)): current_answers.append(len(current_options) - 1)
             else:
-                if len(current_options) == 0: current_q_text.append(line)
-                else: current_options[-1] += " " + line
+                if len(current_options) == 0: 
+                    current_q_text.append(line)
+                else:
+                    current_options[-1] += "\n" + line
 
     save_question()
     if questions: exams.append({"id": current_exam_id, "title": current_exam_title, "questions": questions})
@@ -98,6 +126,9 @@ def parse_ccna(filepath, base_title):
             if os.path.exists(base_path + ext):
                 return base_path + ext
         return None
+
+    current_exam_title = base_title
+    current_exam_id = "ccna_full"
 
     def save_question():
         nonlocal images_found_count
@@ -145,20 +176,35 @@ def parse_ccna(filepath, base_title):
                 else:
                     cleaned_options.append(opt)
                     
+            # --- KIỂM TRA LỖI (VALIDATION) ---
+            is_valid = True
+            error_reasons = []
+            if len(cleaned_options) < 2:
+                is_valid = False
+                error_reasons.append("Chưa nhận diện được phương án (ít hơn 2 phương án)")
+            if len(current_answers) == 0:
+                is_valid = False
+                error_reasons.append("Không tìm thấy đáp án đúng (Thiếu dấu * hoặc _)")
+            
+            if not is_valid:
+                short_q = q_text[:80].replace('\n', ' ') + "..." if len(q_text) > 80 else q_text.replace('\n', ' ')
+                unconverted.append({
+                    "exam": current_exam_title,
+                    "question": short_q,
+                    "reasons": error_reasons
+                })
+            # ---------------------------------
+
             q_obj["options"] = cleaned_options
             if explanations: q_obj["explanations"] = explanations
                 
             questions.append(q_obj)
-
-    current_exam_title = base_title
-    current_exam_id = "ccna_full"
 
     for line in lines:
         line = line.strip()
         if not line: continue
         if line.startswith('0. Note:') or line.startswith('1. 8.19'): break
 
-        # Bắt đầu phát hiện Part để chia đề nhỏ
         part_match = part_pattern.match(line)
         if part_match:
             save_question()
@@ -180,7 +226,6 @@ def parse_ccna(filepath, base_title):
             if not current_part_num: 
                 current_part_num = q_match.group(2)
             
-            # Cập nhật tên đề tự động nếu dòng đầu không có ## Part
             if current_exam_id == "ccna_full" and current_part_num:
                 current_exam_title = f"{base_title} - Part {current_part_num}"
                 current_exam_id = f"ccna_part_{current_part_num}"
@@ -201,7 +246,6 @@ def parse_ccna(filepath, base_title):
                 else:
                     current_options[-1] += "\n" + line
 
-    # Lưu lại câu hỏi cuối và đề cuối cùng
     save_question()
     if questions:
         exams.append({"id": current_exam_id, "title": current_exam_title, "questions": questions})
@@ -216,10 +260,25 @@ if __name__ == "__main__":
     e3, u3, img_count = parse_ccna('CCNA.md', 'Đề CCNA (Có hình ảnh)')
     
     all_exams.extend(e1 + e2 + e3)
+    all_unconverted.extend(u1 + u2 + u3)
     
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(all_exams, f, indent=4, ensure_ascii=False)
         
     total_q = sum(len(e['questions']) for e in all_exams)
-    print(f"\nThành công! Đã tạo data.json gồm {len(all_exams)} đề thi và {total_q} câu hỏi.")
-    print(f"Báo cáo CCNA: Đã tìm thấy và liên kết thành công {img_count} file hình ảnh vào hệ thống!")
+    print(f"\nThành công! Đã tạo data.json gồm {len(all_exams)} đề thi và tổng cộng {total_q} câu hỏi.")
+    print(f"Báo cáo CCNA: Đã tìm thấy và liên kết {img_count} file hình ảnh!")
+    
+    # In ra báo cáo lỗi
+    if all_unconverted:
+        print(f"\n" + "="*80)
+        print(f"CẢNH BÁO: Phát hiện {len(all_unconverted)} câu hỏi CÓ VẤN ĐỀ!")
+        print("="*80)
+        for item in all_unconverted:
+            print(f"Đề thi : {item['exam']}")
+            print(f"Nội dung: {item['question']}")
+            print(f"Lỗi    : {', '.join(item['reasons'])}")
+            print("-" * 80)
+        print("\n=> Vui lòng mở các file Markdown tương ứng và bổ sung đáp án đúng (thêm dấu * hoặc _) cho các câu trên!")
+    else:
+        print(f"Tuyệt vời! 100% câu hỏi từ tất cả các file đều đã nhận diện được phương án và đáp án đầy đủ.")

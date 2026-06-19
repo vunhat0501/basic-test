@@ -96,7 +96,7 @@ _D. The port goes into error-disable state_
 
 Question 5.17: An engineer must configure traffic for a VLAN that is untagged by the switch as it crosses a trunk link. Which command should be used?
 A. switchport trunk allowed vlan 10
-B. switchport trunk native vlan 10
+_B. switchport trunk native vlan 10_
 C. switchport mode trunk
 D. switchport trunk encapsulation dot1q
 
@@ -223,7 +223,7 @@ D. hub-and-spoke
 
 Question 5.38: Refer to the exhibit. The ntp server 192.168.0.3 command has been configured on Router1 to make it an NTP client of router 2. Which command must be configured on Router2 so that it operates in server-only mode and relies only on its internal clock?
 A. Router2(config)#ntp passive
-B. Router2(config)#ntp master 4
+_B. Router2(config)#ntp master 4_
 C. Router2(config)#ntp server 172.17.0.1
 D. Router2(config)#ntp server 192.168.0.2
 
@@ -252,7 +252,7 @@ C. load balancer
 _D. firewall_
 
 Question 5.43: How is the native VLAN secured in a network?
-A. separate from other VLANs within the administrative domain
+_A. separate from other VLANs within the administrative domain_
 B. give it a value in the private VLAN range
 C. assign it as VLAN 1
 D. configure it as a different VLAN ID on each end of the link
@@ -1106,11 +1106,11 @@ Question 8.48: A network engineer must configure two new subnets using the addre
   _E. interface vlan 155
   ip address 10.70.155.65 255.255.255.224_
 
-Question 8.49: Refer to the exhibit. An administrator must connect SW*1 and the printer to the network. SW_2 requires DTP to be used for the connection to SW_1. The printer is configured as an access port with VLAN 5. Which set of commands completes the connectivity?
+Question 8.49: Refer to the exhibit. An administrator must connect SW1 and the printer to the network. SW2 requires DTP to be used for the connection to SW*1. The printer is configured as an access port with VLAN 5. Which set of commands completes the connectivity?
 A. switchport mode trunk
 switchport trunk pruning vlan add 5
-\_B. switchport mode dynamic desirable
-switchport trunk allowed vlan add 5*
+*B. switchport mode dynamic desirable
+switchport trunk allowed vlan add 5\*
 C. switchport mode dynamic auto
 switchport private-vlan association host 5
 D. switchport mode dynamic auto
@@ -1287,7 +1287,7 @@ _D. a wireless LAN controller_
 Question 8.74: Refer to the exhibit. How should the configuration be updated to allow PC1 and PC2 access to the Internet?
 A. Modify the configured number of the second access list
 B. Remove the overload keyword from the ip nat inside source command
-C. Add either the ip nat {inside|outside} command under both interfaces
+_C. Add either the ip nat {inside|outside} command under both interfaces_
 D. Change the ip nat inside source command to use interface GtgabitEthernet0/0
 
 Question 8.75: OSPF must be configured between routers R1 and R2. Which OSPF configuration must be applied to router R1 to avoid a DR/BDR election?
@@ -1555,7 +1555,7 @@ D. switchport trunk allowed vlan 104
 
 Question 9.32: Refer to the exhibit. What is a reason for poor performance on the network interface?
 A. The interface is receiving excessive broadcast traffic.
-B. The cable connection between the two devices is faulty.
+_B. The cable connection between the two devices is faulty._
 C. The interface is operating at a different speed than the connected device.
 D. The bandwidth setting of the interface is misconfigured
 
@@ -2050,8 +2050,8 @@ B. No router ID is set, and the OSPF protocol does not run.
 _C. The highest up/up physical interface IP address is selected as the router ID._
 D. The lowest IP address is incremented by 1 and selected as the router ID.
 
-Question 9.108: Refer to the exhibit. What is expected when PC*A sends data to PC_B after their initial communication?
-\_A. The source and destination MAC addresses remain the same*
+Question 9.108: Refer to the exhibit. What is expected when PCA sends data to PCB after their initial communication?
+_A. The source and destination MAC addresses remain the same_
 B. The switch rewrites the source and destination MAC addresses with its own
 C. The source MAC address is changed
 D. The destination MAC address is replaced with ffff.ffff.ffff
@@ -2681,14 +2681,14 @@ _C. southbound interface_
 D. tunnel interface
 
 Question 11.12: What is the primary purpose of private address space?
-A. conserve globally unique address space
+_A. conserve globally unique address space_
 B. simplify the addressing in the network
 C. limit the number of nodes reachable via the Internet
 D. reduce network complexity
 
 Question 11.13: What is a reason to configure a trunk port that connects to a WLC distribution port?
 A. Eliminate redundancy with a link failure in the data path.
-B. Allow multiple VLAN to be used in the data path.
+_B. Allow multiple VLAN to be used in the data path._
 C. Provide redundancy if there is a link failure for out-of-band management.
 D. Permit multiple VLANs to provide out-of-band management.
 
@@ -2700,7 +2700,7 @@ _D. ip route 10.10.2.1 255.255.255.255 192.168.1.4 100_
 
 Question 11.15: Which cipher is supported for wireless encryption only with the WPA2 standard?
 A. AES256
-B. AES
+_B. AES_
 C. RC4
 D. SHA
 
@@ -2718,7 +2718,7 @@ _D. GetBulk_
 _E. Inform_
 
 Question 11.18:Refer to the exhibit. A packet sourced from 172.18.33.2 is destined for 172.18.32.38. Where does the router forward the packet?
-A. GigabitEthernet0/0
+_A. GigabitEthernet0/0_
 B. Loopback0
 C. 10.1.1.1
 D. 10.1.1.3
@@ -3360,9 +3360,9 @@ B. Null0
 C. GigabitEthernet0/3
 D. GigabitEthernet0/2
 
-Question 12.48: Refer to the exhibit. SW*1 and SW_12 represent two companies that are merging. They use separate network vendors. The VLANs on both sides have been migrated to share IP subnets. Which command sequence must be issued on both sides to join the two companies and pass all VLANs between the companies?
-\_A. switchport mode trunk
-switchport trunk encapsulation dot1q*
+Question 12.48: Refer to the exhibit. SW1 and SW12 represent two companies that are merging. They use separate network vendors. The VLANs on both sides have been migrated to share IP subnets. Which command sequence must be issued on both sides to join the two companies and pass all VLANs between the companies?
+_A. switchport mode trunk
+switchport trunk encapsulation dot1q_
 B. switchport mode trunk
 switchport trunk allowed vlan all
 switchport dot1q ethertype 0800
@@ -3989,7 +3989,7 @@ D. Implement granular QoS.
 Question 13.51: Refer to the exhibit. A packet sourced from 172.16.32.254 is destined for 172.16.32.8. What is the subnet mask of the preferred destination route?
 A. 255.255.224.0
 B. 255.255.255.0
-C. 255.255.255.192
+_C. 255.255.255.192_
 D. 255.255.255.252
 
 Question 13.52: Which WLC interface provides out-of-band management in the Cisco Unified Wireless Network Architecture?
@@ -4499,7 +4499,7 @@ Question 14.37: Refer to the exhibit. Which interface condition is occurring in 
 A. bad NIC
 B. broadcast storm
 C. queueing
-D. _duplex mismatch_ (480 collisions)
+_D. duplex mismatch_ ("480 collisions")
 
 Question 14.38: Refer to the exhibit. Which interface is used to send traffic to the destination network?
 _A. F0/2_
@@ -4582,7 +4582,7 @@ D. high throughput
 Question 14.51: Refer to the exhibit. Which type of JSON data is shown?
 A. string
 B. sequence
-C. object
+_C. object_
 D. Boolean
 
 Question 14.52: By default, how long will the switch continue to know a workstation MAC address after the workstation stops sending traffic?
@@ -4713,7 +4713,7 @@ D. LAG
 Question 14.76: Refer to the exhibit. VoIP is being implemented in the network using VLAN ID 73 and named “VoIP”. Each user needs a Cisco IP phone at their desk. Switchport e0/0 has been configured as an access port in the data VLAN. Cisco Discovery Protocol is enabled globally. Which command sequence completed the configuration?
 A. Option A
 B. Option B
-C. Option C
+_C. Option C_
 D. Option D
 
 Question 14.77: Refer to the exhibit. PC A is communicating with another device at IP address 10.227.151.255.Through which router does router Y route the traffic?
@@ -5182,10 +5182,10 @@ B. Option B
 C. Option C
 _D. Option D_
 
-Question 15.46: Refer to the exhibit. The Wi-Fi SSID “Office*WLan” has Layer 2 Security configured with MAC filtering enabled. What additional security is provided by this specific feature?
+Question 15.46: Refer to the exhibit. The Wi-Fi SSID “Office WLan” has Layer 2 Security configured with MAC filtering enabled. What additional security is provided by this specific feature?
 A. There is Galois cache algorithm configured that provides strong encryption and authentication.
 B. There is a strong mutual authentication used between NAC and the network devices using x.509 standard.
-\_C. There is an extra layer of security that ensures only authorized devices with known MAC addresses connect to the network.*
+_C. There is an extra layer of security that ensures only authorized devices with known MAC addresses connect to the network._
 D. There is a robust security mechanism configured to protect against various Layer 2 and Layer 3 attacks.
 
 Question 15.47: What are two reasons to configure PortFast on a switch port attached to an end host? (Choose two)
@@ -5242,9 +5242,9 @@ B. It dictates security policy updates.
 _C. It identifies patterns indicating intrusions._
 D. It assigns security clearance levels.
 
-Question 15.57: Refer to the exhibit. The My*WLAN wireless LAN was configured with WPA2 Layer 2 PSK security. Which additional configuration must the administrator perform to allow users to connect to this WLAN on a different subnet called Data?
+Question 15.57: Refer to the exhibit. The My WLAN wireless LAN was configured with WPA2 Layer 2 PSK security. Which additional configuration must the administrator perform to allow users to connect to this WLAN on a different subnet called Data?
 A. Enable Broadcast SSID and select data from the Interface/Interface Group drop-down list.
-\_B. Enable Status and select data from the Interface/Interface Group drop-down list.*
+_B. Enable Status and select data from the Interface/Interface Group drop-down list._
 C. Enable Status and set the NAS-ID to data.
 D. Enable Status and enable Broadcast SSID.
 
@@ -5574,7 +5574,7 @@ Question 15.118 (repeated): How does HSRP provide first hop redundancy?
 A. It load-balances traffic by assigning the same metric value to more than one route to the same destination in the IP routing table
 B. It load-balances Layer 2 traffic along the path by flooding traffic out all interfaces configured with the same VLAN
 C. It forwards multiple packets to the same destination over different routed links and data path
-D. It uses a shared virtual MAC and a virtual IP address to a group of routers that _serve as the default gateway for hosts on a LAN_
+_D. It uses a shared virtual MAC and a virtual IP address to a group of routers that serve as the default gateway for hosts on a LAN_
 
 Question 15.119 (repeated): What is a function of TFTP in network operations?
 A. transfers a configuration files from a server to a router on a congested link
@@ -5794,7 +5794,7 @@ D. virtual
 
 Question 16.36: Refer to the exhibit. A switch receives a frame with the destination MAC address 3C:5D:7E:9F:1A:2B.
 How does the switch handle the frame?
-A. It floods the frame to all ports except the incoming port.
+_A. It floods the frame to all ports except the incoming port._
 B. It switches the frame to a predetermined port based on settings.
 C. It ages out the frame until the MAC address becomes known.
 D. It drops the frame to avoid unnecessary network congestion.

@@ -1004,7 +1004,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 101: Một công ty khởi nghiệp (startup) đang phát triển ứng dụng bán hàng online với số lượng nhân sự IT còn ít và ngân sách hạn chế. Công ty muốn triển khai hệ thống nhanh, không cần đầu tư server vật lý ban đầu và có thể mở rộng khi lượng người dùng tăng mạnh trong tương lai. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 101: Một công ty khởi nghiệp (startup) đang phát triển ứng dụng bán hàng online với số lượng nhân\nsự IT còn ít và ngân sách hạn chế. Công ty muốn triển khai hệ thống nhanh, không cần đầu tư\nserver vật lý ban đầu và có thể mở rộng khi lượng người dùng tăng mạnh trong tương lai. Giải\npháp nào phù hợp nhất?",
                 "options": [
                     "On-Premise Infrastructure",
                     "Platform as a Service (PaaS)",
@@ -1014,7 +1014,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 102: Một doanh nghiệp tài chính yêu cầu dữ liệu khách hàng phải được lưu trữ nội bộ để đáp ứng quy định bảo mật và kiểm toán. Tuy nhiên doanh nghiệp vẫn muốn tận dụng khả năng mở rộng linh hoạt của cloud computing khi cần xử lý tải lớn. Mô hình nào phù hợp nhất?",
+                "question": "Câu 102: Một doanh nghiệp tài chính yêu cầu dữ liệu khách hàng phải được lưu trữ nội bộ để đáp ứng\nquy định bảo mật và kiểm toán. Tuy nhiên doanh nghiệp vẫn muốn tận dụng khả năng mở rộng\nlinh hoạt của cloud computing khi cần xử lý tải lớn. Mô hình nào phù hợp nhất?",
                 "options": [
                     "Public Cloud",
                     "Hybrid Cloud",
@@ -1024,7 +1024,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 103: Một nhóm phát triển phần mềm thường xuyên gặp tình trạng “chạy được trên máy lập trình viên nhưng lỗi trên server production”. Giải pháp nào phù hợp nhất để đảm bảo môi trường chạy đồng nhất giữa các môi trường?",
+                "question": "Câu 103: Một nhóm phát triển phần mềm thường xuyên gặp tình trạng “chạy được trên máy lập trình viên\nnhưng lỗi trên server production”. Giải pháp nào phù hợp nhất để đảm bảo môi trường chạy\nđồng nhất giữa các môi trường?",
                 "options": [
                     "Virtual Machine truyền thống",
                     "Docker Container",
@@ -1034,7 +1034,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 104: Một website thương mại điện tử thường có lượng truy cập tăng đột biến vào các dịp khuyến mãi lớn. Doanh nghiệp muốn hệ thống tự động mở rộng thêm tài nguyên và tự giảm khi hết cao điểm để tiết kiệm chi phí. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 104: Một website thương mại điện tử thường có lượng truy cập tăng đột biến vào các dịp khuyến\nmãi lớn. Doanh nghiệp muốn hệ thống tự động mở rộng thêm tài nguyên và tự giảm khi hết cao\nđiểm để tiết kiệm chi phí. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Static Hosting",
                     "Bare-metal Server cố định",
@@ -1044,7 +1044,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 105: Một công ty phát triển game mobile muốn giảm độ trễ khi người dùng ở nhiều quốc gia tải hình ảnh và video trong game. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 105: Một công ty phát triển game mobile muốn giảm độ trễ khi người dùng ở nhiều quốc gia tải hình\nảnh và video trong game. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "CDN (Content Delivery Network)",
                     "Single Local Server",
@@ -1054,7 +1054,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 106: Một doanh nghiệp đang sử dụng nhiều máy chủ vật lý nhưng phần lớn tài nguyên CPU và RAM thường xuyên không được sử dụng hết. Công nghệ nào phù hợp nhất để tối ưu việc sử dụng tài nguyên?",
+                "question": "Câu 106: Một doanh nghiệp đang sử dụng nhiều máy chủ vật lý nhưng phần lớn tài nguyên CPU và RAM\nthường xuyên không được sử dụng hết. Công nghệ nào phù hợp nhất để tối ưu việc sử dụng\ntài nguyên?",
                 "options": [
                     "RAID 0",
                     "Blockchain",
@@ -1064,7 +1064,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 107: Một nhóm DevOps muốn triển khai hàng chục microservices dưới dạng container và cần một nền tảng có khả năng tự động restart container khi lỗi xảy ra. Công cụ nào phù hợp nhất?",
+                "question": "Câu 107: Một nhóm DevOps muốn triển khai hàng chục microservices dưới dạng container và cần một\nnền tảng có khả năng tự động restart container khi lỗi xảy ra. Công cụ nào phù hợp nhất?",
                 "options": [
                     "Kubernetes",
                     "Microsoft Excel",
@@ -1074,7 +1074,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 108: Một công ty muốn giảm thời gian downtime khi triển khai phiên bản mới của ứng dụng lên production. Phương pháp nào phù hợp nhất?",
+                "question": "Câu 108: Một công ty muốn giảm thời gian downtime khi triển khai phiên bản mới của ứng dụng lên\nproduction. Phương pháp nào phù hợp nhất?",
                 "options": [
                     "Manual Restart Server",
                     "Blue-Green Deployment",
@@ -1094,7 +1094,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 110: Một doanh nghiệp muốn nhân viên truy cập hệ thống nội bộ an toàn từ xa qua Internet. Giải pháp phù hợp nhất là gì?",
+                "question": "Câu 110: Một doanh nghiệp muốn nhân viên truy cập hệ thống nội bộ an toàn từ xa qua Internet. Giải\npháp phù hợp nhất là gì?",
                 "options": [
                     "HTTP không mã hóa",
                     "Public FTP",
@@ -1104,7 +1104,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 111: Một công ty cần triển khai ứng dụng web toàn cầu với yêu cầu hệ thống vẫn hoạt động nếu một khu vực (region) cloud gặp sự cố. Kiến trúc nào phù hợp:",
+                "question": "Câu 111: Một công ty cần triển khai ứng dụng web toàn cầu với yêu cầu hệ thống vẫn hoạt động nếu một\nkhu vực (region) cloud gặp sự cố. Kiến trúc nào phù hợp:",
                 "options": [
                     "Local PC Hosting",
                     "Single Server Architecture",
@@ -1114,7 +1114,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 112: Một startup muốn đội phát triển tập trung vào code ứng dụng thay vì quản lý hệ điều hành, patch server và middleware. Mô hình cloud nào phù hợp nhất?",
+                "question": "Câu 112: Một startup muốn đội phát triển tập trung vào code ứng dụng thay vì quản lý hệ điều hành,\npatch server và middleware. Mô hình cloud nào phù hợp nhất?",
                 "options": [
                     "Traditional Hosting",
                     "Bare-metal Infrastructure",
@@ -1124,7 +1124,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 113: Một công ty media lưu trữ hàng triệu video dung lượng lớn và cần khả năng mở rộng linh hoạt theo thời gian. Loại storage nào phù hợp nhất?",
+                "question": "Câu 113: Một công ty media lưu trữ hàng triệu video dung lượng lớn và cần khả năng mở rộng linh hoạt\ntheo thời gian. Loại storage nào phù hợp nhất?",
                 "options": [
                     "DVD Archive",
                     "Local USB Storage",
@@ -1134,7 +1134,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 114: Một doanh nghiệp muốn giảm nguy cơ mất dữ liệu khi server bị lỗi phần cứng hoặc ransomware attack. Giải pháp phù hợp nhất là gì?",
+                "question": "Câu 114: Một doanh nghiệp muốn giảm nguy cơ mất dữ liệu khi server bị lỗi phần cứng hoặc\nransomware attack. Giải pháp phù hợp nhất là gì?",
                 "options": [
                     "Không backup để tiết kiệm chi phí",
                     "Chỉ lưu dữ liệu trên máy local",
@@ -1144,7 +1144,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 115: Một công ty cần hệ thống có thể triển khai tính năng mới nhiều lần mỗi ngày với quy trình tự động kiểm thử và triển khai. Phương pháp nào phù hợp nhất?",
+                "question": "Câu 115: Một công ty cần hệ thống có thể triển khai tính năng mới nhiều lần mỗi ngày với quy trình tự\nđộng kiểm thử và triển khai. Phương pháp nào phù hợp nhất?",
                 "options": [
                     "CI/CD Pipeline",
                     "Manual Deployment",
@@ -1154,7 +1154,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 116: Một doanh nghiệp thương mại điện tử muốn phân tích log truy cập để phát hiện tấn công bất thường theo thời gian thực. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 116: Một doanh nghiệp thương mại điện tử muốn phân tích log truy cập để phát hiện tấn công bất\nthường theo thời gian thực. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Offline Spreadsheet",
                     "Desktop Wallpaper Manager",
@@ -1164,7 +1164,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 117: Một công ty fintech yêu cầu tất cả tài khoản quản trị phải xác thực bằng nhiều lớp bảo mật thay vì chỉ mật khẩu. Giải pháp phù hợp nhất?",
+                "question": "Câu 117: Một công ty fintech yêu cầu tất cả tài khoản quản trị phải xác thực bằng nhiều lớp bảo mật thay\nvì chỉ mật khẩu. Giải pháp phù hợp nhất?",
                 "options": [
                     "Guest Account",
                     "Shared Password",
@@ -1174,7 +1174,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 118: Một nhóm phát triển muốn triển khai hạ tầng cloud bằng code để có thể version control và tái sử dụng cấu hình. Công nghệ nào phù hợp nhất?",
+                "question": "Câu 118: Một nhóm phát triển muốn triển khai hạ tầng cloud bằng code để có thể version control và tái sử\ndụng cấu hình. Công nghệ nào phù hợp nhất?",
                 "options": [
                     "Infrastructure as Code (IaC)",
                     "Manual Configuration",
@@ -1184,7 +1184,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 119: Một ứng dụng có nhiều thành phần nhỏ như authentication, payment, notification và inventory hoạt động độc lập. Kiến trúc nào phù hợp nhất?",
+                "question": "Câu 119: Một ứng dụng có nhiều thành phần nhỏ như authentication, payment, notification và inventory\nhoạt động độc lập. Kiến trúc nào phù hợp nhất?",
                 "options": [
                     "Monolithic Architecture duy nhất",
                     "Microservices Architecture",
@@ -1194,7 +1194,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 120: Một doanh nghiệp muốn tiết kiệm chi phí bằng cách chỉ trả tiền cho tài nguyên thực tế sử dụng thay vì mua server cố định. Đặc điểm nào của cloud computing đáp ứng tốt nhất yêu cầu này?",
+                "question": "Câu 120: Một doanh nghiệp muốn tiết kiệm chi phí bằng cách chỉ trả tiền cho tài nguyên thực tế sử dụng\nthay vì mua server cố định. Đặc điểm nào của cloud computing đáp ứng tốt nhất yêu cầu này?",
                 "options": [
                     "Pay-as-you-go",
                     "Offline Deployment",
@@ -1204,7 +1204,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 121: Một doanh nghiệp triển khai ứng dụng web trên cloud nhưng gặp tình trạng người dùng không truy cập được khi một server bị lỗi. Giải pháp nào phù hợp nhất để tăng tính sẵn sàng (high availability)?",
+                "question": "Câu 121: Một doanh nghiệp triển khai ứng dụng web trên cloud nhưng gặp tình trạng người dùng không\ntruy cập được khi một server bị lỗi. Giải pháp nào phù hợp nhất để tăng tính sẵn sàng (high\navailability)?",
                 "options": [
                     "Chạy ứng dụng offline",
                     "Chỉ dùng một server cấu hình mạnh",
@@ -1214,7 +1214,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 122: Một công ty cần lưu trữ dữ liệu khách hàng quan trọng và muốn dữ liệu được mã hóa cả khi lưu trữ và khi truyền tải qua Internet. Giải pháp phù hợp nhất là gì?",
+                "question": "Câu 122: Một công ty cần lưu trữ dữ liệu khách hàng quan trọng và muốn dữ liệu được mã hóa cả khi lưu\ntrữ và khi truyền tải qua Internet. Giải pháp phù hợp nhất là gì?",
                 "options": [
                     "Chỉ dùng mật khẩu mạnh",
                     "Encryption at Rest và Encryption in Transit",
@@ -1224,7 +1224,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 123: Một startup phát triển ứng dụng mobile có lượng người dùng thay đổi liên tục theo thời gian trong ngày. Họ muốn tối ưu chi phí hạ tầng mà vẫn đảm bảo hiệu năng. Giải pháp phù hợp nhất là gì?",
+                "question": "Câu 123: Một startup phát triển ứng dụng mobile có lượng người dùng thay đổi liên tục theo thời gian\ntrong ngày. Họ muốn tối ưu chi phí hạ tầng mà vẫn đảm bảo hiệu năng. Giải pháp phù hợp nhất\nlà gì?",
                 "options": [
                     "Auto Scaling trên cloud",
                     "Mua server vật lý cố định",
@@ -1234,7 +1234,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 124: Một doanh nghiệp muốn triển khai chatbot AI nhưng không muốn tự xây dựng hạ tầng machine learning từ đầu. Giải pháp phù hợp nhất?",
+                "question": "Câu 124: Một doanh nghiệp muốn triển khai chatbot AI nhưng không muốn tự xây dựng hạ tầng machine\nlearning từ đầu. Giải pháp phù hợp nhất?",
                 "options": [
                     "FTP Server",
                     "Desktop Application",
@@ -1244,7 +1244,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 125: Một công ty thương mại điện tử muốn giảm tải cho database bằng cách lưu dữ liệu truy cập thường xuyên trong bộ nhớ tốc độ cao. Công nghệ nào phù hợp nhất?",
+                "question": "Câu 125: Một công ty thương mại điện tử muốn giảm tải cho database bằng cách lưu dữ liệu truy cập\nthường xuyên trong bộ nhớ tốc độ cao. Công nghệ nào phù hợp nhất?",
                 "options": [
                     "Redis Cache",
                     "RAID Controller",
@@ -1254,7 +1254,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 126: Một doanh nghiệp cần triển khai nhanh một website giới thiệu công ty với lượng truy cập không quá lớn, chủ yếu là nội dung tĩnh như hình ảnh và thông tin sản phẩm. Loại dịch vụ cloud nào phù hợp nhất?",
+                "question": "Câu 126: Một doanh nghiệp cần triển khai nhanh một website giới thiệu công ty với lượng truy cập không\nquá lớn, chủ yếu là nội dung tĩnh như hình ảnh và thông tin sản phẩm. Loại dịch vụ cloud nào\nphù hợp nhất?",
                 "options": [
                     "GPU Computing Cluster",
                     "Object Storage Static Website Hosting",
@@ -1264,7 +1264,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 127: Một công ty AI cần huấn luyện mô hình machine learning với khối lượng tính toán lớn trong thời gian ngắn. Loại dịch vụ nào phù hợp nhất?",
+                "question": "Câu 127: Một công ty AI cần huấn luyện mô hình machine learning với khối lượng tính toán lớn trong thời\ngian ngắn. Loại dịch vụ nào phù hợp nhất?",
                 "options": [
                     "GPU Compute Instance",
                     "Object Storage",
@@ -1274,7 +1274,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 128: Một doanh nghiệp cần lưu trữ hàng chục TB dữ liệu backup nhưng ít truy cập và ưu tiên chi phí thấp. Loại storage nào phù hợp nhất?",
+                "question": "Câu 128: Một doanh nghiệp cần lưu trữ hàng chục TB dữ liệu backup nhưng ít truy cập và ưu tiên chi phí\nthấp. Loại storage nào phù hợp nhất?",
                 "options": [
                     "Local SSD Storage",
                     "NVMe Block Storage",
@@ -1284,7 +1284,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 129: Một hệ thống ERP cần database có độ ổn định cao, hỗ trợ backup tự động và khả năng scaling dễ dàng. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 129: Một hệ thống ERP cần database có độ ổn định cao, hỗ trợ backup tự động và khả năng scaling\ndễ dàng. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Managed Relational Database Service",
                     "FTP Server",
@@ -1294,7 +1294,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 130: Một startup phát triển ứng dụng mobile cần backend API nhưng không muốn quản lý server. Loại dịch vụ nào phù hợp nhất?",
+                "question": "Câu 130: Một startup phát triển ứng dụng mobile cần backend API nhưng không muốn quản lý server.\nLoại dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Tape Storage System",
                     "Bare-metal Server",
@@ -1304,7 +1304,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 131: Một công ty streaming video muốn giảm độ trễ khi người dùng xem nội dung ở nhiều quốc gia khác nhau. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 131: Một công ty streaming video muốn giảm độ trễ khi người dùng xem nội dung ở nhiều quốc gia\nkhác nhau. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Single-region VM",
                     "Local File Server",
@@ -1314,7 +1314,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 132: Một doanh nghiệp cần kết nối riêng tư và an toàn giữa hệ thống on-premise và cloud provider. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 132: Một doanh nghiệp cần kết nối riêng tư và an toàn giữa hệ thống on-premise và cloud provider.\nDịch vụ nào phù hợp nhất?",
                 "options": [
                     "Site-to-Site VPN",
                     "Public HTTP Access",
@@ -1324,7 +1324,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 133: Một công ty cần chạy hàng trăm container microservices với khả năng tự động scale và orchestration. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 133: Một công ty cần chạy hàng trăm container microservices với khả năng tự động scale và\norchestration. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Personal Desktop PC",
                     "Shared Hosting",
@@ -1334,7 +1334,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 134: Một doanh nghiệp muốn lưu session đăng nhập người dùng với tốc độ truy cập rất nhanh và thời gian phản hồi thấp. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 134: Một doanh nghiệp muốn lưu session đăng nhập người dùng với tốc độ truy cập rất nhanh và\nthời gian phản hồi thấp. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "In-memory Cache Service",
                     "Archive Storage",
@@ -1344,7 +1344,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 135: Một công ty cần hệ thống lưu log tập trung từ nhiều application server để phục vụ monitoring và troubleshooting. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 135: Một công ty cần hệ thống lưu log tập trung từ nhiều application server để phục vụ monitoring và\ntroubleshooting. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Static DNS Hosting",
                     "GPU Rendering Service",
@@ -1354,7 +1354,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 136: Một ứng dụng IoT cần thu thập dữ liệu liên tục từ hàng triệu thiết bị cảm biến. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 136: Một ứng dụng IoT cần thu thập dữ liệu liên tục từ hàng triệu thiết bị cảm biến. Dịch vụ nào phù\nhợp nhất?",
                 "options": [
                     "Message Queue / IoT Hub Service",
                     "FTP Hosting",
@@ -1364,7 +1364,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 137: Một doanh nghiệp muốn triển khai ứng dụng web nhưng cần tự động phân phối traffic đến nhiều server backend để tránh quá tải. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 137: Một doanh nghiệp muốn triển khai ứng dụng web nhưng cần tự động phân phối traffic đến\nnhiều server backend để tránh quá tải. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Local Proxy Software",
                     "Archive Storage",
@@ -1374,7 +1374,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 138: Một công ty phát triển ứng dụng toàn cầu cần phân giải tên miền ổn định với độ sẵn sàng cao. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 138: Một công ty phát triển ứng dụng toàn cầu cần phân giải tên miền ổn định với độ sẵn sàng cao.\nDịch vụ nào phù hợp nhất?",
                 "options": [
                     "Block Storage",
                     "GPU Cluster",
@@ -1384,7 +1384,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 139: Một doanh nghiệp muốn bảo vệ ứng dụng web khỏi SQL Injection và các tấn công HTTP phổ biến. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 139: Một doanh nghiệp muốn bảo vệ ứng dụng web khỏi SQL Injection và các tấn công HTTP phổ\nbiến. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Web Application Firewall (WAF)",
                     "Object Storage",
@@ -1394,7 +1394,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 140: Một startup cần môi trường phát triển nhanh cho đội lập trình, không cần quản lý OS hay middleware. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 140: Một startup cần môi trường phát triển nhanh cho đội lập trình, không cần quản lý OS hay\nmiddleware. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Bare-metal Infrastructure",
                     "Platform as a Service (PaaS)",
@@ -1404,7 +1404,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 141: Một công ty tài chính cần hệ thống có khả năng xử lý transaction database với độ ổn định và consistency cao. Loại database nào phù hợp nhất?",
+                "question": "Câu 141: Một công ty tài chính cần hệ thống có khả năng xử lý transaction database với độ ổn định và\nconsistency cao. Loại database nào phù hợp nhất?",
                 "options": [
                     "Relational Database Service",
                     "Object Storage",
@@ -1414,7 +1414,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 142: Một doanh nghiệp muốn triển khai hệ thống backup tự động giữa nhiều region cloud để phục vụ disaster recovery. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 142: Một doanh nghiệp muốn triển khai hệ thống backup tự động giữa nhiều region cloud để phục vụ\ndisaster recovery. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Single VM Snapshot",
                     "Local SSD Only",
@@ -1424,7 +1424,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 143: Một công ty AI muốn lưu trữ tập dữ liệu training dung lượng cực lớn và cần khả năng mở rộng linh hoạt. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 143: Một công ty AI muốn lưu trữ tập dữ liệu training dung lượng cực lớn và cần khả năng mở rộng\nlinh hoạt. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Embedded Database",
                     "Object Storage",
@@ -1434,7 +1434,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 144: Một doanh nghiệp muốn quản lý bí mật hệ thống như API key, database password và certificate tập trung. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 144: Một doanh nghiệp muốn quản lý bí mật hệ thống như API key, database password và certificate\ntập trung. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "FTP Storage",
                     "Public Shared Folder",
@@ -1444,7 +1444,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 145: Một công ty cần chạy batch processing vào ban đêm để xử lý dữ liệu lớn nhưng không muốn trả tiền server cả ngày. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 145: Một công ty cần chạy batch processing vào ban đêm để xử lý dữ liệu lớn nhưng không muốn\ntrả tiền server cả ngày. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Serverless Batch Computing",
                     "Dedicated Physical Server",
@@ -1454,7 +1454,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 146: Một doanh nghiệp muốn nhân viên đăng nhập một lần để sử dụng nhiều hệ thống nội bộ và cloud service khác nhau. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 146: Một doanh nghiệp muốn nhân viên đăng nhập một lần để sử dụng nhiều hệ thống nội bộ và\ncloud service khác nhau. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Shared Password Excel File",
                     "Local User Account riêng lẻ",
@@ -1464,7 +1464,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 147: Một công ty thương mại điện tử muốn tăng tốc truy vấn dữ liệu sản phẩm phổ biến mà không làm quá tải database chính. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 147: Một công ty thương mại điện tử muốn tăng tốc truy vấn dữ liệu sản phẩm phổ biến mà không\nlàm quá tải database chính. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Archive Storage",
                     "Distributed Cache Service",
@@ -1474,7 +1474,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 148: Một doanh nghiệp cần hệ thống message bất đồng bộ để giao tiếp giữa các microservices. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 148: Một doanh nghiệp cần hệ thống message bất đồng bộ để giao tiếp giữa các microservices. Dịch\nvụ nào phù hợp nhất?",
                 "options": [
                     "File Compression Tool",
                     "Static Web Hosting",
@@ -1484,7 +1484,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 149: Một hệ thống analytics cần xử lý dữ liệu log theo thời gian thực từ hàng triệu người dùng. Loại dịch vụ nào phù hợp nhất?",
+                "question": "Câu 149: Một hệ thống analytics cần xử lý dữ liệu log theo thời gian thực từ hàng triệu người dùng. Loại\ndịch vụ nào phù hợp nhất?",
                 "options": [
                     "Stream Processing Service",
                     "FTP Upload Service",
@@ -1494,7 +1494,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 150: Một doanh nghiệp muốn theo dõi CPU, RAM, network traffic và tự động gửi cảnh báo khi hệ thống bất thường. Dịch vụ nào phù hợp nhất?",
+                "question": "Câu 150: Một doanh nghiệp muốn theo dõi CPU, RAM, network traffic và tự động gửi cảnh báo khi hệ\nthống bất thường. Dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Object Storage",
                     "Cloud Monitoring Service",
@@ -1504,7 +1504,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 151: Một trường đại học muốn đưa hệ thống e-learning lên cloud để dễ mở rộng, nhưng vẫn muốn tận dụng data center hiện có để lưu trữ dữ liệu sinh viên nhằm tối ưu chi phí đầu tư. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 151: Một trường đại học muốn đưa hệ thống e-learning lên cloud để dễ mở rộng, nhưng vẫn muốn\ntận dụng data center hiện có để lưu trữ dữ liệu sinh viên nhằm tối ưu chi phí đầu tư. Tổ hợp\ndịch vụ nào phù hợp nhất?",
                 "options": [
                     "Docker, On-premise Database, VPN",
                     "VM, On-premise Database, VPN",
@@ -1513,7 +1513,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 152: Một startup phát triển ứng dụng mobile muốn giảm chi phí vận hành server, tự động scale theo số lượng người dùng và không cần quản lý hệ điều hành. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 152: Một startup phát triển ứng dụng mobile muốn giảm chi phí vận hành server, tự động scale theo\nsố lượng người dùng và không cần quản lý hệ điều hành. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Serverless Functions, Managed Database, CDN",
                     "Bare-metal Server, Local Database, FTP",
@@ -1522,7 +1522,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 153: Một công ty thương mại điện tử cần triển khai hệ thống toàn cầu với khả năng chịu tải cao và giảm độ trễ truy cập từ nhiều quốc gia. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 153: Một công ty thương mại điện tử cần triển khai hệ thống toàn cầu với khả năng chịu tải cao và\ngiảm độ trễ truy cập từ nhiều quốc gia. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Single VM, Local DNS, Shared Storage",
                     "Load Balancer, CDN, Multi-region Deployment",
@@ -1531,7 +1531,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 154: Một doanh nghiệp tài chính yêu cầu hệ thống có độ bảo mật cao, kết nối riêng giữa cloud và data center nội bộ, đồng thời database phải nằm trong hệ thống công ty. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 154: Một doanh nghiệp tài chính yêu cầu hệ thống có độ bảo mật cao, kết nối riêng giữa cloud và\ndata center nội bộ, đồng thời database phải nằm trong hệ thống công ty. Tổ hợp dịch vụ nào\nphù hợp nhất?",
                 "options": [
                     "Public Database, Shared VPN, CDN",
                     "Hybrid Cloud, Site-to-Site VPN, On-premise Database",
@@ -1540,7 +1540,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 155: Một công ty AI cần môi trường xử lý machine learning với GPU mạnh, lưu trữ dữ liệu lớn và khả năng mở rộng linh hoạt khi training model. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 155: Một công ty AI cần môi trường xử lý machine learning với GPU mạnh, lưu trữ dữ liệu lớn và khả\nnăng mở rộng linh hoạt khi training model. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "GPU Compute, Object Storage, Auto Scaling",
                     "Shared Hosting, Local HDD, FTP",
@@ -1549,7 +1549,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 156: Một doanh nghiệp muốn triển khai kiến trúc microservices và cần hệ thống tự động orchestration container, tự restart service khi lỗi xảy ra. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 156: Một doanh nghiệp muốn triển khai kiến trúc microservices và cần hệ thống tự động\norchestration container, tự restart service khi lỗi xảy ra. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "FTP Server, Shared Folder, Manual Deployment",
                     "Kubernetes, Container Registry, Monitoring Service",
@@ -1558,7 +1558,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 157: Một công ty media streaming muốn tối ưu tốc độ tải video cho người dùng toàn cầu và giảm tải cho server chính. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 157: Một công ty media streaming muốn tối ưu tốc độ tải video cho người dùng toàn cầu và giảm tải\ncho server chính. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "CDN, Object Storage, Load Balancer",
                     "Local Server, FTP Hosting, Manual Replication",
@@ -1567,7 +1567,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 158: Một doanh nghiệp muốn triển khai hệ thống backup dữ liệu đa vùng (multi-region) để phục vụ disaster recovery khi một region gặp sự cố. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 158: Một doanh nghiệp muốn triển khai hệ thống backup dữ liệu đa vùng (multi-region) để phục vụ\ndisaster recovery khi một region gặp sự cố. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Desktop Backup Software, FTP Upload, RAID 0",
                     "Local HDD Backup, USB Copy, Shared Folder",
@@ -1576,7 +1576,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 159: Một startup SaaS muốn triển khai nhanh sản phẩm đầu tiên với ít nhân sự IT, ưu tiên dịch vụ managed để giảm vận hành hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 159: Một startup SaaS muốn triển khai nhanh sản phẩm đầu tiên với ít nhân sự IT, ưu tiên dịch vụ\nmanaged để giảm vận hành hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Bare-metal Server, Local MySQL, Manual Deploy",
                     "PaaS, Managed Database, CI/CD Service",
@@ -1585,7 +1585,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 160: Một doanh nghiệp cần hệ thống xác thực tập trung cho nhiều ứng dụng cloud và nội bộ, đồng thời tăng cường bảo mật tài khoản người dùng. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 160: Một doanh nghiệp cần hệ thống xác thực tập trung cho nhiều ứng dụng cloud và nội bộ, đồng\nthời tăng cường bảo mật tài khoản người dùng. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Local User Account, Guest Login, Public Access",
                     "Shared Password Excel File, FTP Login, HTTP Access",
@@ -1594,7 +1594,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 161: Một công ty logistics muốn thu thập dữ liệu thời gian thực từ hàng nghìn thiết bị IoT đặt tại nhiều tỉnh thành. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 161: Một công ty logistics muốn thu thập dữ liệu thời gian thực từ hàng nghìn thiết bị IoT đặt tại\nnhiều tỉnh thành. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "IoT Hub, Message Queue, Stream Processing",
                     "Shared Folder, FTP Hosting, Local Desktop App",
@@ -1603,7 +1603,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 162: Một hệ thống ngân hàng cần triển khai ứng dụng với downtime cực thấp và khả năng chuyển đổi dự phòng tự động khi có lỗi hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 162: Một hệ thống ngân hàng cần triển khai ứng dụng với downtime cực thấp và khả năng chuyển\nđổi dự phòng tự động khi có lỗi hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Single VM, Local Backup, Shared Wi-Fi",
                     "High Availability Cluster, Load Balancer, Multi-zone Deployment",
@@ -1612,7 +1612,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 163: Một công ty phát triển game online cần giảm thời gian phản hồi API cho người chơi bằng cách lưu dữ liệu truy cập phổ biến trong bộ nhớ tốc độ cao. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 163: Một công ty phát triển game online cần giảm thời gian phản hồi API cho người chơi bằng cách\nlưu dữ liệu truy cập phổ biến trong bộ nhớ tốc độ cao. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Redis Cache, Load Balancer, Auto Scaling",
                     "Tape Storage, Shared Folder, FTP Upload",
@@ -1621,7 +1621,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 164: Một doanh nghiệp muốn triển khai hệ thống CI/CD tự động build, test và deploy ứng dụng container lên cloud. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 164: Một doanh nghiệp muốn triển khai hệ thống CI/CD tự động build, test và deploy ứng dụng\ncontainer lên cloud. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Git Repository, CI/CD Pipeline, Kubernetes",
                     "FTP Upload, Shared Drive, Manual Restart",
@@ -1630,7 +1630,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 165: Một công ty bảo hiểm muốn phân tích dữ liệu khách hàng số lượng lớn phục vụ AI và báo cáo kinh doanh. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 165: Một công ty bảo hiểm muốn phân tích dữ liệu khách hàng số lượng lớn phục vụ AI và báo cáo\nkinh doanh. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Local SSD, BIOS Cache, Desktop Database",
                     "Shared Folder, Excel Offline, FTP",
@@ -1639,7 +1639,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 166: Một doanh nghiệp muốn triển khai ứng dụng web nhưng cần bảo vệ khỏi SQL Injection và DDoS attack. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 166: Một doanh nghiệp muốn triển khai ứng dụng web nhưng cần bảo vệ khỏi SQL Injection và\nDDoS attack. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Public Database, HTTP Access, Guest Account",
                     "FTP Server, Shared Hosting, Local Switch",
@@ -1648,7 +1648,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 167: Một startup fintech muốn giảm chi phí hạ tầng bằng cách chỉ trả tiền khi API được gọi thay vì duy trì server chạy liên tục. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 167: Một startup fintech muốn giảm chi phí hạ tầng bằng cách chỉ trả tiền khi API được gọi thay vì\nduy trì server chạy liên tục. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Serverless Functions, API Gateway, Managed Database",
                     "Dedicated Physical Server, Local Firewall, FTP",
@@ -1657,7 +1657,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 168: Một doanh nghiệp cần hệ thống lưu trữ file dùng chung cho nhiều VM trên cloud với khả năng mount đồng thời. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 168: Một doanh nghiệp cần hệ thống lưu trữ file dùng chung cho nhiều VM trên cloud với khả năng\nmount đồng thời. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Local USB Storage, FTP Server, Desktop App",
                     "File Storage Service, Virtual Machine, Private Network",
@@ -1666,7 +1666,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 169: Một công ty thương mại điện tử muốn triển khai hệ thống recommendation AI nhưng dữ liệu khách hàng vẫn phải lưu tại data center nội bộ. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 169: Một công ty thương mại điện tử muốn triển khai hệ thống recommendation AI nhưng dữ liệu\nkhách hàng vẫn phải lưu tại data center nội bộ. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Hybrid Cloud, AI Service, Private Network Link",
                     "Shared Hosting, FTP Transfer, Local Cache",
@@ -1675,7 +1675,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 170: Một doanh nghiệp cần hệ thống monitoring tập trung cho toàn bộ VM, container và network trên cloud. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 170: Một doanh nghiệp cần hệ thống monitoring tập trung cho toàn bộ VM, container và network trên\ncloud. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "BIOS Utility, RAID Controller, Desktop Wallpaper",
                     "FTP Service, Shared Folder, Local Printer",
@@ -1684,7 +1684,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 171: Một công ty giáo dục muốn triển khai phòng lab thực hành cloud cho sinh viên mà không cần đầu tư nhiều máy cấu hình cao. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 171: Một công ty giáo dục muốn triển khai phòng lab thực hành cloud cho sinh viên mà không cần\nđầu tư nhiều máy cấu hình cao. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Tape Storage, FTP Hosting, Shared HDD",
                     "Virtual Desktop Infrastructure (VDI), Cloud VM, VPN",
@@ -1693,7 +1693,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 172: Một doanh nghiệp bán lẻ muốn đồng bộ dữ liệu tồn kho giữa nhiều chi nhánh theo thời gian thực. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 172: Một doanh nghiệp bán lẻ muốn đồng bộ dữ liệu tồn kho giữa nhiều chi nhánh theo thời gian\nthực. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Managed Database, Message Queue, Private Network",
                     "Shared Excel File, FTP Upload, USB Backup",
@@ -1702,7 +1702,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 173: Một công ty startup cần triển khai website marketing đơn giản với chi phí thấp và không cần backend phức tạp. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 173: Một công ty startup cần triển khai website marketing đơn giản với chi phí thấp và không cần\nbackend phức tạp. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Static Website Hosting, CDN, Object Storage",
                     "Kubernetes Cluster, GPU VM, VPN Gateway",
@@ -1711,7 +1711,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 174: Một doanh nghiệp muốn quản lý secrets như API key và database password tập trung để tăng bảo mật hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 174: Một doanh nghiệp muốn quản lý secrets như API key và database password tập trung để tăng\nbảo mật hệ thống. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Shared Text File, FTP Access, Guest Account",
                     "Secrets Management Service, IAM, Encryption",
@@ -1720,7 +1720,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 175: Một công ty vận tải cần phân tích dữ liệu GPS từ xe tải theo thời gian thực để tối ưu tuyến đường. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 175: Một công ty vận tải cần phân tích dữ liệu GPS từ xe tải theo thời gian thực để tối ưu tuyến\nđường. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Stream Processing, Big Data Analytics, IoT Hub",
                     "Local Spreadsheet, Shared Drive, FTP Upload",
@@ -1729,7 +1729,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 176: Một doanh nghiệp muốn giảm downtime khi deploy phiên bản mới của hệ thống production. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 176: Một doanh nghiệp muốn giảm downtime khi deploy phiên bản mới của hệ thống production. Tổ\nhợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "FTP Upload, Manual Restart, Shared Hosting",
                     "Blue-Green Deployment, Load Balancer, Auto Scaling",
@@ -1738,7 +1738,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 177: Một startup phát triển ứng dụng toàn cầu cần hệ thống DNS có độ sẵn sàng cao và khả năng routing thông minh theo khu vực địa lý. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 177: Một startup phát triển ứng dụng toàn cầu cần hệ thống DNS có độ sẵn sàng cao và khả năng\nrouting thông minh theo khu vực địa lý. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Desktop Database, USB Storage, Public Proxy",
                     "Local DNS Server, Shared Wi-Fi, FTP Hosting",
@@ -1747,7 +1747,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 178: Một công ty game online muốn triển khai backend microservices nhưng cần tách biệt môi trường development, staging và production. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 178: Một công ty game online muốn triển khai backend microservices nhưng cần tách biệt môi\ntrường development, staging và production. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Kubernetes Namespace, CI/CD Pipeline, Container Registry",
                     "Shared Folder, FTP Server, Manual Deploy",
@@ -1756,7 +1756,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 179: Một doanh nghiệp healthcare muốn lưu dữ liệu bệnh án trên cloud nhưng phải đảm bảo dữ liệu được mã hóa và kiểm soát truy cập chặt chẽ. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 179: Một doanh nghiệp healthcare muốn lưu dữ liệu bệnh án trên cloud nhưng phải đảm bảo dữ liệu\nđược mã hóa và kiểm soát truy cập chặt chẽ. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Local USB Storage, Guest Account, Public Wi-Fi",
                     "Public FTP, Shared Folder, HTTP Access",
@@ -1765,16 +1765,16 @@
                 "answer": 2
             },
             {
-                "question": "Câu 180: Một công ty truyền thông cần hệ thống xử lý và phân phối livestream cho lượng lớn người xem cùng lúc. Tổ hợp dịch vụ nào phù hợp nhất?",
+                "question": "Câu 180: Một công ty truyền thông cần hệ thống xử lý và phân phối livestream cho lượng lớn người xem\ncùng lúc. Tổ hợp dịch vụ nào phù hợp nhất?",
                 "options": [
                     "Shared Hosting, FTP Upload, Local HDD",
                     "CDN, Load Balancer, Auto Scaling Compute",
-                    "Desktop PC, USB Streaming, Public Proxy dụng"
+                    "Desktop PC, USB Streaming, Public Proxy\ndụng"
                 ],
                 "answer": 1
             },
             {
-                "question": "Câu 181: Một startup AI đang sử dụng GPU cloud để huấn luyện mô hình (training model). Hệ thống chỉ hoạt động mạnh vào ban ngày, nhưng đội vận hành phát hiện chi phí cloud tăng liên tục dù không tăng workload. Công ty muốn tối ưu chi phí nhưng vẫn đảm bảo khi cần có thể mở rộng nhanh ngay lập tức. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 181: Một startup AI đang sử dụng GPU cloud để huấn luyện mô hình (training model). Hệ thống chỉ\nhoạt động mạnh vào ban ngày, nhưng đội vận hành phát hiện chi phí cloud tăng liên tục dù\nkhông tăng workload. Công ty muốn tối ưu chi phí nhưng vẫn đảm bảo khi cần có thể mở rộng\nnhanh ngay lập tức. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Reserved GPU Instance kết hợp tự động tắt ngoài giờ (schedule shutdown)",
                     "On-demand GPU Instance kết hợp tự động tắt ngoài giờ (automation shutdown)",
@@ -1783,7 +1783,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 182: Một doanh nghiệp triển khai Kubernetes production (K8S) trên cloud. Khi triển khai phiên bản mới (deploy), một số pod bị lỗi nhưng hệ thống vẫn hoạt động bình thường do traffic được chuyển sang pod khác. Tuy nhiên đội vận hành muốn phát hiện lỗi sớm trước khi ảnh hưởng người dùng cuối. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 182: Một doanh nghiệp triển khai Kubernetes production (K8S) trên cloud. Khi triển khai phiên bản\nmới (deploy), một số pod bị lỗi nhưng hệ thống vẫn hoạt động bình thường do traffic được\nchuyển sang pod khác. Tuy nhiên đội vận hành muốn phát hiện lỗi sớm trước khi ảnh hưởng\nngười dùng cuối. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Health Check kết hợp cảnh báo giám sát hệ thống (alerting monitoring)",
                     "Health Check kết hợp khởi động lại node định kỳ",
@@ -1792,16 +1792,16 @@
                 "answer": 0
             },
             {
-                "question": "Câu 183: Một công ty thương mại điện tử muốn triển khai hệ thống cơ sở dữ liệu (database) trên cloud. Yêu cầu quan trọng nhất là dữ liệu giao dịch không được mất khi một VM hoặc một vùng khả dụng (availability zone) gặp sự cố. Đồng thời hệ thống phải giảm tối đa downtime. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 183: Một công ty thương mại điện tử muốn triển khai hệ thống cơ sở dữ liệu (database) trên cloud.\nYêu cầu quan trọng nhất là dữ liệu giao dịch không được mất khi một VM hoặc một vùng khả\ndụng (availability zone) gặp sự cố. Đồng thời hệ thống phải giảm tối đa downtime. Giải pháp\nnào phù hợp nhất?",
                 "options": [
                     "Managed Relational Database Single-AZ kết hợp snapshot tự động",
-                    "Managed Relational Database Multi-AZ kết hợp chuyển đổi dự phòng tự động (automatic failover)_",
+                    "Managed Relational Database Multi-AZ kết hợp chuyển đổi dự phòng tự động\n(automatic failover)",
                     "Tự quản lý database replication trên nhiều VM"
                 ],
                 "answer": 1
             },
             {
-                "question": "Câu 184: Một doanh nghiệp đang chuyển hệ thống từ hạ tầng nội bộ (on-premise) lên cloud. Ứng dụng hiện tại sử dụng kiến trúc nguyên khối (monolithic architecture), phụ thuộc nhiều vào hệ điều hành và cần migrate trong thời gian ngắn nhất để giảm downtime dự án. Chiến lược nào phù hợp nhất?",
+                "question": "Câu 184: Một doanh nghiệp đang chuyển hệ thống từ hạ tầng nội bộ (on-premise) lên cloud. Ứng dụng\nhiện tại sử dụng kiến trúc nguyên khối (monolithic architecture), phụ thuộc nhiều vào hệ điều\nhành và cần migrate trong thời gian ngắn nhất để giảm downtime dự án. Chiến lược nào phù\nhợp nhất?",
                 "options": [
                     "Rehosting ứng dụng nguyên trạng lên cloud VM",
                     "Refactor từng module trước khi migrate toàn bộ",
@@ -1810,7 +1810,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 185: Một công ty SaaS có khách hàng ở nhiều quốc gia. Họ nhận thấy thời gian phản hồi API (API response) tại châu Âu chậm hơn nhiều so với châu Á vì backend đặt tại Singapore. Công ty chưa muốn nhân bản toàn bộ backend (duplicate backend) do chi phí cao. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 185: Một công ty SaaS có khách hàng ở nhiều quốc gia. Họ nhận thấy thời gian phản hồi API (API\nresponse) tại châu Âu chậm hơn nhiều so với châu Á vì backend đặt tại Singapore. Công ty\nchưa muốn nhân bản toàn bộ backend (duplicate backend) do chi phí cao. Giải pháp nào phù\nhợp nhất?",
                 "options": [
                     "CDN kết hợp bộ nhớ đệm API (API caching) cho dữ liệu phù hợp cache",
                     "Multi-region backend active-active cho toàn bộ service",
@@ -1819,7 +1819,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 186: Một doanh nghiệp muốn triển khai quy trình CI/CD cho hệ thống. Yêu cầu quan trọng nhất là nếu khi triển khai gặp lỗi phải khôi phục bản cũ (rollback) nhanh, giảm tối đa downtime và không ảnh hưởng toàn bộ người dùng cùng lúc. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 186: Một doanh nghiệp muốn triển khai quy trình CI/CD cho hệ thống. Yêu cầu quan trọng nhất là\nnếu khi triển khai gặp lỗi phải khôi phục bản cũ (rollback) nhanh, giảm tối đa downtime và\nkhông ảnh hưởng toàn bộ người dùng cùng lúc. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Rolling Deployment với tự động rollback",
                     "Canary Deployment với giám sát từng phần lưu lượng truy cập",
@@ -1828,7 +1828,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 187: Một công ty fintech yêu cầu dữ liệu khách hàng phải lưu trong trung tâm dữ liệu nội bộ (On premises data center), nhưng vẫn muốn dùng AI service trên cloud để phân tích dữ liệu giao dịch (transaction data). Yếu tố quan trọng nhất là hạn chế dữ liệu đi qua Internet công cộng. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 187: Một công ty fintech yêu cầu dữ liệu khách hàng phải lưu trong trung tâm dữ liệu nội bộ (On\npremises data center), nhưng vẫn muốn dùng AI service trên cloud để phân tích dữ liệu giao\ndịch (transaction data). Yếu tố quan trọng nhất là hạn chế dữ liệu đi qua Internet công cộng.\nGiải pháp nào phù hợp nhất?",
                 "options": [
                     "Hybrid Cloud kết hợp Site-to-Site VPN",
                     "Hybrid Cloud kết hợp kết nối mạng riêng (Private Network Link)",
@@ -1837,7 +1837,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 188: Một đội DevOps triển khai hệ thống microservices bằng container. Khi ứng dụng gặp lỗi, họ mất nhiều thời gian để xác định truy cập (request) đi qua dịch vụ nào trước khi bị lỗi. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 188: Một đội DevOps triển khai hệ thống microservices bằng container. Khi ứng dụng gặp lỗi, họ mất\nnhiều thời gian để xác định truy cập (request) đi qua dịch vụ nào trước khi bị lỗi. Giải pháp nào\nphù hợp nhất?",
                 "options": [
                     "Ghi log tập trung (centralized logging) kết hợp metrics monitoring",
                     "Theo dõi luồng request phân tán (distributed tracing) kết hợp centralized logging",
@@ -1846,7 +1846,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 189: Một công ty startup muốn triển khai backend nhanh và ít tốn công vận hành nhất. Hệ thống chủ yếu là REST API đơn giản với truy cập chưa lớn, nhưng có thể scale nhanh nếu sản phẩm thành công. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 189: Một công ty startup muốn triển khai backend nhanh và ít tốn công vận hành nhất. Hệ thống chủ\nyếu là REST API đơn giản với truy cập chưa lớn, nhưng có thể scale nhanh nếu sản phẩm\nthành công. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Backend dạng container trên managed Kubernetes",
                     "Serverless Functions kết hợp Managed Database",
@@ -1855,7 +1855,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 190: Một doanh nghiệp chia sẻ video trực tuyến có lượng video rất lớn nhưng phần lớn dữ liệu cũ gần như không truy cập lại sau vài tháng. Công ty muốn tối ưu chi phí lưu trữ nhưng vẫn cần khả năng khôi phục khi cần. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 190: Một doanh nghiệp chia sẻ video trực tuyến có lượng video rất lớn nhưng phần lớn dữ liệu cũ\ngần như không truy cập lại sau vài tháng. Công ty muốn tối ưu chi phí lưu trữ nhưng vẫn cần\nkhả năng khôi phục khi cần. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Object Storage Standard kết hợp lifecycle policy",
                     "Archive Storage kết hợp chính sách quản lý vòng đời (lifecycle policy)",
@@ -1864,7 +1864,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 191: Một hệ thống thương mại điện tử (e-commerce) thường bị tăng tải đột biến vào các chiến dịch flash sale. Đội vận hành muốn hệ thống tự động mở rộng (auto scaling) nhưng vẫn tránh việc scale sai do đột biến truy cập (spike traffic) ngắn hạn trong vài giây. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 191: Một hệ thống thương mại điện tử (e-commerce) thường bị tăng tải đột biến vào các chiến dịch\nflash sale. Đội vận hành muốn hệ thống tự động mở rộng (auto scaling) nhưng vẫn tránh việc\nscale sai do đột biến truy cập (spike traffic) ngắn hạn trong vài giây. Giải pháp nào phù hợp\nnhất?",
                 "options": [
                     "Auto Scaling theo CPU realtime không cooldown",
                     "Auto Scaling theo average metrics kết hợp cooldown period",
@@ -1873,7 +1873,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 192: Một doanh nghiệp Y Tế triển khai ứng dụng trên cloud. Yêu cầu quan trọng nhất là chỉ các dịch vụ nội bộ mới được truy cập cơ sở dữ liệu, tuyệt đối không mở truy cập ra Internet. Giải pháp nào phù hợp nhất về mặt chi phí và triển khai?",
+                "question": "Câu 192: Một doanh nghiệp Y Tế triển khai ứng dụng trên cloud. Yêu cầu quan trọng nhất là chỉ các dịch\nvụ nội bộ mới được truy cập cơ sở dữ liệu, tuyệt đối không mở truy cập ra Internet. Giải pháp\nnào phù hợp nhất về mặt chi phí và triển khai?",
                 "options": [
                     "Database Private Subnet kết hợp Security Group nội bộ",
                     "Database Public Endpoint kết hợp IP whitelist",
@@ -1882,7 +1882,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 193: Một công ty game online muốn giảm độ trễ (latency) cho người chơi toàn cầu. Tuy nhiên gameplay sử dụng kết nối thời gian thực (realtime websocket connection) nên CDN chỉ hỗ trợ một phần nhỏ workload. Giải pháp nào phù hợp nhất cho trải nghiệm người dùng?",
+                "question": "Câu 193: Một công ty game online muốn giảm độ trễ (latency) cho người chơi toàn cầu. Tuy nhiên\ngameplay sử dụng kết nối thời gian thực (realtime websocket connection) nên CDN chỉ hỗ trợ\nmột phần nhỏ workload. Giải pháp nào phù hợp nhất cho trải nghiệm người dùng?",
                 "options": [
                     "CDN kết hợp regional websocket gateway",
                     "Multi-region backend deployment gần người dùng",
@@ -1891,7 +1891,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 194: Một doanh nghiệp muốn triển khai hạ tầng bằng mã nguồn (Infrastructure as Code) nhưng nhiều đội dự án cùng sửa hạ tầng này. Công ty muốn giảm rủi ro cấu hình bị ghi đè (overwrite) hoặc triển khai (deploy) sai. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 194: Một doanh nghiệp muốn triển khai hạ tầng bằng mã nguồn (Infrastructure as Code) nhưng\nnhiều đội dự án cùng sửa hạ tầng này. Công ty muốn giảm rủi ro cấu hình bị ghi đè (overwrite)\nhoặc triển khai (deploy) sai. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Terraform kết hợp Git workflow và approval process",
                     "Terraform kết hợp shared admin account cho toàn team",
@@ -1900,7 +1900,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 195: Một startup sử dụng Kubernetes nhưng đội vận hành nhận thấy nhiều container thường xuyên trục trặc do thiếu bộ nhớ. Tuy nhiên workload thay đổi liên tục giữa các thời điểm trong ngày. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 195: Một startup sử dụng Kubernetes nhưng đội vận hành nhận thấy nhiều container thường xuyên\ntrục trặc do thiếu bộ nhớ. Tuy nhiên workload thay đổi liên tục giữa các thời điểm trong ngày.\nGiải pháp nào phù hợp nhất?",
                 "options": [
                     "Tăng memory limit cố định cho toàn bộ pod",
                     "Resource Requests/Limits kết hợp Horizontal Pod Autoscaler",
@@ -1909,7 +1909,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 196: Một doanh nghiệp muốn triển khai hệ thống sao lưu (backup cloud). Yêu cầu quan trọng nhất là dữ liệu backup không bị tin tặc xóa hoặc chỉnh sửa ngay cả khi tài khoản admin production bị chiếm quyền (compromise). Giải pháp nào phù hợp nhất?",
+                "question": "Câu 196: Một doanh nghiệp muốn triển khai hệ thống sao lưu (backup cloud). Yêu cầu quan trọng nhất là\ndữ liệu backup không bị tin tặc xóa hoặc chỉnh sửa ngay cả khi tài khoản admin production bị\nchiếm quyền (compromise). Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Cross-region Backup Storage",
                     "Immutable Backup Storage",
@@ -1918,7 +1918,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 197: Một công ty SaaS muốn tối ưu chi phí cloud lâu dài. Họ phát hiện nhiều VM production chạy ổn định 24/7 suốt nhiều tháng và gần như không thay đổi tài nguyên sử dụng. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 197: Một công ty SaaS muốn tối ưu chi phí cloud lâu dài. Họ phát hiện nhiều VM production chạy ổn\nđịnh 24/7 suốt nhiều tháng và gần như không thay đổi tài nguyên sử dụng. Giải pháp nào phù\nhợp nhất?",
                 "options": [
                     "Spot Instance dài hạn cho production workload ổn định",
                     "Reserved Instance hoặc Savings Plan cho workload ổn định",
@@ -1927,7 +1927,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 198: Một hệ thống banking cần triển khai trung tâm dự phòng thảm họa (Disaster Recovery site). Ban lãnh đạo yêu cầu khi region chính gặp sự cố, hệ thống có thể hoạt động lại trong thời gian ngắn nhất với dữ liệu mất ít nhất có thể. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 198: Một hệ thống banking cần triển khai trung tâm dự phòng thảm họa (Disaster Recovery site).\nBan lãnh đạo yêu cầu khi region chính gặp sự cố, hệ thống có thể hoạt động lại trong thời gian\nngắn nhất với dữ liệu mất ít nhất có thể. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Backup định kỳ và restore thủ công sang DR region",
                     "Active-Passive Multi-region Replication",
@@ -1936,7 +1936,7 @@
                 "answer": 1
             },
             {
-                "question": "Câu 199: Một đội phát triển muốn tăng tốc quy trình CI/CD vì thời gian build container hiện quá lâu. Sau khi phân tích, phần lớn thời gian nằm ở bước tải phụ thuộc (dependency) lặp lại nhiều lần. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 199: Một đội phát triển muốn tăng tốc quy trình CI/CD vì thời gian build container hiện quá lâu. Sau\nkhi phân tích, phần lớn thời gian nằm ở bước tải phụ thuộc (dependency) lặp lại nhiều lần. Giải\npháp nào phù hợp nhất?",
                 "options": [
                     "Docker Layer Cache và dependency caching",
                     "Parallel build nhiều pipeline đồng thời",
@@ -1945,7 +1945,7 @@
                 "answer": 0
             },
             {
-                "question": "Câu 200: Một doanh nghiệp lớn triển khai multi-cloud giữa AWS và Azure. Yêu cầu quan trọng nhất là tránh phụ thuộc hoàn toàn vào một cloud provider nhưng vẫn giữ khả năng quản trị tập trung và networking ổn định. Giải pháp nào phù hợp nhất?",
+                "question": "Câu 200: Một doanh nghiệp lớn triển khai multi-cloud giữa AWS và Azure. Yêu cầu quan trọng nhất là\ntránh phụ thuộc hoàn toàn vào một cloud provider nhưng vẫn giữ khả năng quản trị tập trung và\nnetworking ổn định. Giải pháp nào phù hợp nhất?",
                 "options": [
                     "Multi-cloud kết hợp public Internet VPN giữa các cloud",
                     "Multi-cloud với quản trị độc lập từng cloud provider",
@@ -3600,7 +3600,7 @@
                 "answer": 3
             },
             {
-                "question": "Câu 52: Which pillar of the AWS Well-Architected Framework includes the design principle of defining workloads, applications, and infrastructure as code (IaC)? Đề bài: Điều nào pillar của AWS Well-Architected Framework includes design principle của defining workload, ứng dụng, và hạ tầng vì/như mã (IaC)?",
+                "question": "Câu 52: Which pillar of the AWS Well-Architected Framework includes the design principle of defining workloads, applications, and infrastructure as code (IaC)?\nĐề bài: Điều nào pillar của AWS Well-Architected Framework includes design principle của defining workload, ứng dụng, và hạ tầng vì/như mã (IaC)?",
                 "options": [
                     "Reliability - Độ tin cậy",
                     "Performance efficiency - Hiệu quả hiệu năng",
@@ -3738,7 +3738,7 @@
                 "answer": 2
             },
             {
-                "question": "Câu 65: Under the AWS shared responsibility model, which of the following is an example of customer responsibility in the AWS Cloud? Đề bài: Under AWS shared responsibility model, nào của following là mộtn example của customer responsibility trong AWS cloud?",
+                "question": "Câu 65: Under the AWS shared responsibility model, which of the following is an example of customer responsibility in the AWS Cloud?\nĐề bài: Under AWS shared responsibility model, nào của following là mộtn example của customer responsibility trong AWS cloud?",
                 "options": [
                     "Firewall conﬁguration - Cấu hình tường lửa",
                     "Global infrastructure - Hạ tầng toàn cầu",
@@ -7629,7 +7629,7 @@
                     "switchport mode trunk",
                     "switchport trunk encapsulation dot1q"
                 ],
-                "answer": -1
+                "answer": 1
             },
             {
                 "question": "Câu 5.18:\nWhat is the maximum bandwidth of a T1 point-to-point connection?",
@@ -7858,7 +7858,7 @@
                     "Router2(config)#ntp server 172.17.0.1",
                     "Router2(config)#ntp server 192.168.0.2"
                 ],
-                "answer": -1,
+                "answer": 1,
                 "image": [
                     "media/ccna/part-5/5.38.png"
                 ]
@@ -7914,7 +7914,7 @@
                     "assign it as VLAN 1",
                     "configure it as a different VLAN ID on each end of the link"
                 ],
-                "answer": -1
+                "answer": 0
             },
             {
                 "question": "Câu 5.43:\nHow is the native VLAN secured in a network?",
@@ -9367,13 +9367,14 @@
                 ]
             },
             {
-                "question": "Câu 8.49:\nRefer to the exhibit. An administrator must connect SW*1 and the printer to the network. SW_2 requires DTP to be used for the connection to SW_1. The printer is configured as an access port with VLAN 5. Which set of commands completes the connectivity?",
+                "question": "Câu 8.49:\nRefer to the exhibit. An administrator must connect SW1 and the printer to the network. SW2 requires DTP to be used for the connection to SW*1. The printer is configured as an access port with VLAN 5. Which set of commands completes the connectivity?",
                 "options": [
-                    "switchport mode trunk\nswitchport trunk pruning vlan add 5\n\\_B. switchport mode dynamic desirable\nswitchport trunk allowed vlan add 5",
+                    "switchport mode trunk\nswitchport trunk pruning vlan add 5",
+                    "switchport mode dynamic desirable\nswitchport trunk allowed vlan add 5\\",
                     "switchport mode dynamic auto\nswitchport private-vlan association host 5",
                     "switchport mode dynamic auto\nswitchport trunk encapsulation negotiate"
                 ],
-                "answer": -1,
+                "answer": 1,
                 "image": [
                     "media/ccna/part-8/8.49.png"
                 ]
@@ -9641,7 +9642,7 @@
                     "Add either the ip nat {inside|outside} command under both interfaces",
                     "Change the ip nat inside source command to use interface GtgabitEthernet0/0"
                 ],
-                "answer": -1,
+                "answer": 2,
                 "image": [
                     "media/ccna/part-8/8.74.png"
                 ]
@@ -10060,7 +10061,7 @@
                     "The interface is operating at a different speed than the connected device.",
                     "The bandwidth setting of the interface is misconfigured"
                 ],
-                "answer": -1,
+                "answer": 1,
                 "image": [
                     "media/ccna/part-9/9.32.png"
                 ]
@@ -10793,13 +10794,14 @@
                 "answer": 2
             },
             {
-                "question": "Câu 9.108:\nRefer to the exhibit. What is expected when PC*A sends data to PC_B after their initial communication?\n\\_A. The source and destination MAC addresses remain the same*",
+                "question": "Câu 9.108:\nRefer to the exhibit. What is expected when PCA sends data to PCB after their initial communication?",
                 "options": [
+                    "The source and destination MAC addresses remain the same",
                     "The switch rewrites the source and destination MAC addresses with its own",
                     "The source MAC address is changed",
                     "The destination MAC address is replaced with ffff.ffff.ffff"
                 ],
-                "answer": -1,
+                "answer": 0,
                 "image": [
                     "media/ccna/part-9/9.108.png"
                 ]
@@ -11841,7 +11843,7 @@
                     "limit the number of nodes reachable via the Internet",
                     "reduce network complexity"
                 ],
-                "answer": -1
+                "answer": 0
             },
             {
                 "question": "Câu 11.13:\nWhat is a reason to configure a trunk port that connects to a WLC distribution port?",
@@ -11851,7 +11853,7 @@
                     "Provide redundancy if there is a link failure for out-of-band management.",
                     "Permit multiple VLANs to provide out-of-band management."
                 ],
-                "answer": -1
+                "answer": 1
             },
             {
                 "question": "Câu 11.14:\nRefer to the exhibit. Traffic from R1 to the 10.10.2.0/24 subnet uses 192.168.1.2 as its next hop. An network engineer wants to update the R1 configuration so that traffic with destination 10.10.2.1 passes through router R3, and all other traffic to the 10.10.2.0/24 subnet passes through R2. Which command must be used?",
@@ -11874,7 +11876,7 @@
                     "RC4",
                     "SHA"
                 ],
-                "answer": -1
+                "answer": 1
             },
             {
                 "question": "Câu 11.16:\nRefer to the exhibit. Which entry is the longest prefix match for host IP address 192.168.10.5?",
@@ -11911,7 +11913,7 @@
                     "10.1.1.1",
                     "10.1.1.3"
                 ],
-                "answer": -1,
+                "answer": 0,
                 "image": [
                     "media/ccna/part-11/11.18.png"
                 ]
@@ -12952,13 +12954,14 @@
                 ]
             },
             {
-                "question": "Câu 12.48:\nRefer to the exhibit. SW*1 and SW_12 represent two companies that are merging. They use separate network vendors. The VLANs on both sides have been migrated to share IP subnets. Which command sequence must be issued on both sides to join the two companies and pass all VLANs between the companies?\n\\_A. switchport mode trunk\nswitchport trunk encapsulation dot1q*",
+                "question": "Câu 12.48:\nRefer to the exhibit. SW1 and SW12 represent two companies that are merging. They use separate network vendors. The VLANs on both sides have been migrated to share IP subnets. Which command sequence must be issued on both sides to join the two companies and pass all VLANs between the companies?",
                 "options": [
+                    "switchport mode trunk\nswitchport trunk encapsulation dot1q",
                     "switchport mode trunk\nswitchport trunk allowed vlan all\nswitchport dot1q ethertype 0800",
                     "switchport mode dynamic desirable\nswitchport trunk allowed vlan all\nswitchport trunk native vlan 7",
                     "switchport dynamic auto\nswitchport nonegotiate"
                 ],
-                "answer": -1,
+                "answer": 0,
                 "image": [
                     "media/ccna/part-12/12.48.png"
                 ]
@@ -14053,7 +14056,7 @@
                     "255.255.255.192",
                     "255.255.255.252"
                 ],
-                "answer": -1,
+                "answer": 2,
                 "image": [
                     "media/ccna/part-13/13.51.png"
                 ]
@@ -14901,14 +14904,14 @@
                     "bad NIC",
                     "broadcast storm",
                     "queueing",
-                    "_duplex mismatch_"
+                    "duplex mismatch_"
                 ],
-                "answer": -1,
+                "answer": 3,
                 "image": [
                     "media/ccna/part-14/14.37.png"
                 ],
                 "explanations": {
-                    "3": "(480 collisions)"
+                    "3": "(\"480 collisions\")"
                 }
             },
             {
@@ -15064,7 +15067,7 @@
                     "object",
                     "Boolean"
                 ],
-                "answer": -1,
+                "answer": 2,
                 "image": [
                     "media/ccna/part-14/14.51.png"
                 ]
@@ -15293,7 +15296,7 @@
                     "Option C",
                     "Option D"
                 ],
-                "answer": -1,
+                "answer": 2,
                 "image": [
                     "media/ccna/part-14/14.76.png"
                 ]
@@ -16155,13 +16158,14 @@
                 ]
             },
             {
-                "question": "Câu 15.46:\nRefer to the exhibit. The Wi-Fi SSID “Office*WLan” has Layer 2 Security configured with MAC filtering enabled. What additional security is provided by this specific feature?",
+                "question": "Câu 15.46:\nRefer to the exhibit. The Wi-Fi SSID “Office WLan” has Layer 2 Security configured with MAC filtering enabled. What additional security is provided by this specific feature?",
                 "options": [
                     "There is Galois cache algorithm configured that provides strong encryption and authentication.",
-                    "There is a strong mutual authentication used between NAC and the network devices using x.509 standard.\n\\_C. There is an extra layer of security that ensures only authorized devices with known MAC addresses connect to the network.",
+                    "There is a strong mutual authentication used between NAC and the network devices using x.509 standard.",
+                    "There is an extra layer of security that ensures only authorized devices with known MAC addresses connect to the network.",
                     "There is a robust security mechanism configured to protect against various Layer 2 and Layer 3 attacks."
                 ],
-                "answer": -1,
+                "answer": 2,
                 "image": [
                     "media/ccna/part-15/15.46.png"
                 ]
@@ -16263,13 +16267,14 @@
                 "answer": 2
             },
             {
-                "question": "Câu 15.57:\nRefer to the exhibit. The My*WLAN wireless LAN was configured with WPA2 Layer 2 PSK security. Which additional configuration must the administrator perform to allow users to connect to this WLAN on a different subnet called Data?",
+                "question": "Câu 15.57:\nRefer to the exhibit. The My WLAN wireless LAN was configured with WPA2 Layer 2 PSK security. Which additional configuration must the administrator perform to allow users to connect to this WLAN on a different subnet called Data?",
                 "options": [
-                    "Enable Broadcast SSID and select data from the Interface/Interface Group drop-down list.\n\\_B. Enable Status and select data from the Interface/Interface Group drop-down list.",
+                    "Enable Broadcast SSID and select data from the Interface/Interface Group drop-down list.",
+                    "Enable Status and select data from the Interface/Interface Group drop-down list.",
                     "Enable Status and set the NAS-ID to data.",
                     "Enable Status and enable Broadcast SSID."
                 ],
-                "answer": -1,
+                "answer": 1,
                 "image": [
                     "media/ccna/part-15/15.57.png"
                 ]
@@ -16870,9 +16875,9 @@
                     "It load-balances traffic by assigning the same metric value to more than one route to the same destination in the IP routing table",
                     "It load-balances Layer 2 traffic along the path by flooding traffic out all interfaces configured with the same VLAN",
                     "It forwards multiple packets to the same destination over different routed links and data path",
-                    "It uses a shared virtual MAC and a virtual IP address to a group of routers that _serve as the default gateway for hosts on a LAN"
+                    "It uses a shared virtual MAC and a virtual IP address to a group of routers that serve as the default gateway for hosts on a LAN"
                 ],
-                "answer": -1
+                "answer": 3
             },
             {
                 "question": "Câu 15.119:\n(repeated): What is a function of TFTP in network operations?",
@@ -17270,7 +17275,7 @@
                     "It ages out the frame until the MAC address becomes known.",
                     "It drops the frame to avoid unnecessary network congestion."
                 ],
-                "answer": -1,
+                "answer": 0,
                 "image": [
                     "media/ccna/part-16/16.36.png"
                 ]
