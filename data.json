@@ -7540,7 +7540,7 @@
                     "create",
                     "delete"
                 ],
-                "answer": -1
+                "answer": 0
             },
             {
                 "question": "Câu 5.10:\nWith REST API, which standard HTTP header tells a server which media type is expected by the client?",

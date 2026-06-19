@@ -47,7 +47,7 @@ C. a virtual switch that links to an access point that is physically connected t
 _D. a software switch on a hypervisor that is physically connected to the network_
 
 Question 5.9: Which CRUD operation corresponds to the HTTP GET method?
-A. read
+_A. read_
 B. update
 C. create
 D. delete
