@@ -1,5 +1,6 @@
 const examSelect = document.getElementById("exam-select");
 const questionText = document.getElementById("question-text");
+const imagesContainer = document.getElementById("question-images-container");
 const multiHint = document.getElementById("multi-answer-hint");
 const optionsContainer = document.getElementById("options-container");
 const prevBtn = document.getElementById("prev-btn");
@@ -17,8 +18,6 @@ const gridWrapper = document.getElementById("grid-wrapper");
 let allExams = [];
 let currentExam = null;
 let currentQuestionIndex = 0;
-
-// Cấu trúc lưu trữ: { "exam_id": { "question_index": { selected: [0, 2], isCorrect: false } } }
 let userAnswers = {};
 
 async function loadData() {
@@ -26,7 +25,6 @@ async function loadData() {
         const response = await fetch("data.json");
         allExams = await response.json();
 
-        // Nạp dữ liệu vào Dropdown
         examSelect.innerHTML = '<option value="">-- Chọn đề thi --</option>';
         allExams.forEach((exam) => {
             const option = document.createElement("option");
@@ -35,14 +33,12 @@ async function loadData() {
             examSelect.appendChild(option);
         });
 
-        // Khôi phục bộ nhớ cục bộ
         const savedData = localStorage.getItem("devops_quiz_answers");
         if (savedData) userAnswers = JSON.parse(savedData);
 
         examSelect.addEventListener("change", (e) => {
-            if (e.target.value) {
-                switchExam(e.target.value);
-            } else {
+            if (e.target.value) switchExam(e.target.value);
+            else {
                 quizContainer.classList.add("hidden");
                 navContainer.classList.add("hidden");
             }
@@ -58,7 +54,6 @@ function switchExam(examId) {
     currentExam = allExams.find((e) => e.id === examId);
     if (!userAnswers[examId]) userAnswers[examId] = {};
 
-    // Tìm câu hỏi chưa làm tiếp theo, hoặc bắt đầu từ 0
     let lastIndex = parseInt(localStorage.getItem(`last_index_${examId}`)) || 0;
     currentQuestionIndex = lastIndex;
 
@@ -78,10 +73,22 @@ function showQuestion() {
     const qData = currentExam.questions[currentQuestionIndex];
     questionText.innerText = qData.question;
 
-    // Hiển thị gợi ý nếu có nhiều đáp án
-    const correctCount = qData.answer.length;
-    if (correctCount > 1) {
-        multiHint.innerText = `(Vui lòng chọn ${correctCount} đáp án)`;
+    imagesContainer.innerHTML = "";
+    if (qData.image && qData.image.length > 0) {
+        qData.image.forEach((src) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.className = "question-image";
+            imagesContainer.appendChild(img);
+        });
+        imagesContainer.classList.remove("hidden");
+    } else {
+        imagesContainer.classList.add("hidden");
+    }
+
+    const isMulti = Array.isArray(qData.answer);
+    if (isMulti) {
+        multiHint.innerText = `(Vui lòng chọn ${qData.answer.length} đáp án)`;
         multiHint.classList.remove("hidden");
     } else {
         multiHint.classList.add("hidden");
@@ -90,70 +97,88 @@ function showQuestion() {
     const answeredData = userAnswers[currentExam.id][currentQuestionIndex];
 
     qData.options.forEach((option, index) => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        button.classList.add("option-btn");
-        button.dataset.index = index;
+        const btn = document.createElement("button");
+        btn.classList.add("option-btn");
+        btn.dataset.index = index;
+
+        const textSpan = document.createElement("span");
+        textSpan.innerText = option;
+        btn.appendChild(textSpan);
+
+        if (qData.explanations && qData.explanations[index]) {
+            const expSpan = document.createElement("span");
+            expSpan.className = "explanation hidden";
+            expSpan.innerText = qData.explanations[index];
+            btn.appendChild(expSpan);
+        }
 
         if (answeredData) {
-            button.disabled = true;
-            // Hiển thị mọi đáp án đúng
-            if (qData.answer.includes(index)) {
-                button.classList.add("correct");
-            }
-            // Bôi đỏ nếu người dùng chọn sai
-            if (
-                answeredData.selected.includes(index) &&
-                !qData.answer.includes(index)
-            ) {
-                button.classList.add("wrong");
+            btn.disabled = true;
+
+            const expSpan = btn.querySelector(".explanation");
+            if (expSpan) expSpan.classList.remove("hidden");
+
+            if (isMulti) {
+                if (qData.answer.includes(index)) btn.classList.add("correct");
+                if (
+                    answeredData.selected.includes(index) &&
+                    !qData.answer.includes(index)
+                )
+                    btn.classList.add("wrong");
+            } else {
+                if (index === qData.answer) btn.classList.add("correct");
+                if (
+                    answeredData.selected.includes(index) &&
+                    index !== qData.answer
+                )
+                    btn.classList.add("wrong");
             }
         } else {
-            button.addEventListener("click", () =>
-                toggleOption(button, correctCount > 1),
-            );
+            btn.addEventListener("click", () => toggleOption(btn, isMulti));
         }
-        optionsContainer.appendChild(button);
+        optionsContainer.appendChild(btn);
     });
 
     updateNavigationButtons();
     updateGridActiveState();
-
-    // Lưu vị trí câu hỏi hiện tại cho đề này
     localStorage.setItem(`last_index_${currentExam.id}`, currentQuestionIndex);
 }
 
 function toggleOption(btn, isMulti) {
-    if (!isMulti) {
-        // Nếu chỉ chọn 1, bỏ chọn các nút khác
+    if (!isMulti)
         Array.from(optionsContainer.children).forEach((b) =>
             b.classList.remove("selected"),
         );
-    }
     btn.classList.toggle("selected");
     updateNavigationButtons();
 }
 
 function checkAnswer() {
+    const qData = currentExam.questions[currentQuestionIndex];
+    const isMulti = Array.isArray(qData.answer);
     const selectedBtns = Array.from(
         optionsContainer.querySelectorAll(".selected"),
     );
+
     if (selectedBtns.length === 0) return;
-
     const selectedIndices = selectedBtns.map((b) => parseInt(b.dataset.index));
-    const correctIndices = currentExam.questions[currentQuestionIndex].answer;
 
-    // Kiểm tra đúng/sai (so sánh 2 mảng)
-    const isCorrect =
-        selectedIndices.length === correctIndices.length &&
-        selectedIndices.every((val) => correctIndices.includes(val));
+    let isCorrect = false;
+    if (isMulti) {
+        isCorrect =
+            selectedIndices.length === qData.answer.length &&
+            selectedIndices.every((val) => qData.answer.includes(val));
+    } else {
+        isCorrect = selectedIndices[0] === qData.answer;
+    }
 
     userAnswers[currentExam.id][currentQuestionIndex] = {
         selected: selectedIndices,
         isCorrect: isCorrect,
     };
+
     saveProgress();
-    showQuestion(); // Render lại để khóa nút và bôi màu
+    showQuestion();
     renderNavGrid();
 }
 
@@ -183,17 +208,14 @@ function updateNavigationButtons() {
 }
 
 checkBtn.addEventListener("click", checkAnswer);
-
 prevBtn.addEventListener("click", () => {
     currentQuestionIndex--;
     showQuestion();
 });
-
 nextBtn.addEventListener("click", () => {
     currentQuestionIndex++;
     showQuestion();
 });
-
 finishBtn.addEventListener("click", showResult);
 
 function showResult() {
@@ -207,7 +229,6 @@ function showResult() {
     for (let key in examAnswers) {
         if (examAnswers[key].isCorrect) score++;
     }
-
     scoreText.innerHTML = `Bạn đã đúng <strong>${score}</strong> / ${currentExam.questions.length} câu.<br><small>(Đã làm ${answeredCount} câu)</small>`;
 }
 
@@ -216,7 +237,6 @@ document.getElementById("review-btn").addEventListener("click", () => {
     showQuestion();
 });
 
-// Grid điều hướng
 function renderNavGrid() {
     questionGrid.innerHTML = "";
     const examAnswers = userAnswers[currentExam.id] || {};
@@ -226,10 +246,11 @@ function renderNavGrid() {
         btn.innerText = index + 1;
         btn.classList.add("grid-btn");
 
-        const ans = examAnswers[index];
-        if (ans) {
+        if (examAnswers[index]) {
             btn.classList.add(
-                ans.isCorrect ? "answered-correct" : "answered-wrong",
+                examAnswers[index].isCorrect
+                    ? "answered-correct"
+                    : "answered-wrong",
             );
         }
 
@@ -255,23 +276,21 @@ function updateGridActiveState() {
     });
 }
 
-// Toggle ẩn/hiện lưới câu hỏi
 toggleGridBtn.addEventListener("click", () => {
     gridWrapper.classList.toggle("hidden");
     if (!gridWrapper.classList.contains("hidden")) {
         toggleGridBtn.innerText = "▲ Ẩn danh sách câu hỏi";
-        updateGridActiveState(); // Scroll tời câu hiện tại
+        updateGridActiveState();
     } else {
         toggleGridBtn.innerText = "▼ Hiển thị danh sách câu hỏi";
     }
 });
 
-// Lưu / Xóa dữ liệu
 function saveProgress() {
     localStorage.setItem("devops_quiz_answers", JSON.stringify(userAnswers));
 }
 
-function resetCurrentExam() {
+document.getElementById("restart-btn").addEventListener("click", () => {
     if (confirm("Reset toàn bộ kết quả của ĐỀ NÀY?")) {
         userAnswers[currentExam.id] = {};
         saveProgress();
@@ -279,22 +298,14 @@ function resetCurrentExam() {
         showQuestion();
         renderNavGrid();
     }
-}
+});
 
-function resetAllData() {
+document.getElementById("reset-all-btn").addEventListener("click", () => {
     if (confirm("Xóa TOÀN BỘ dữ liệu của mọi đề thi?")) {
         localStorage.removeItem("devops_quiz_answers");
         userAnswers = {};
         switchExam(currentExam.id);
     }
-}
+});
 
-document
-    .getElementById("restart-btn")
-    .addEventListener("click", resetCurrentExam);
-document
-    .getElementById("reset-all-btn")
-    .addEventListener("click", resetAllData);
-
-// Khởi chạy
 loadData();
