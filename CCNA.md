@@ -1773,6 +1773,12 @@ B. static IP tunneling
 C. DHCP address assignment
 D. client exclusion
 
+Question 9.62: Refer to the exhibit. What must be configured to enable 802.11w on the WLAN?
+_A. Set PMF to Required_
+B. Enable MAC Filtering
+C. Enable WPA Policy
+D. Set Fast Transition to Enabled
+
 Question 9.65: Refer to the exhibit. Which configuration establishes a Layer 2 LACP EtherChannel when applied to both switches?
 A. interface range G1/1 -1/3
 switchport mode access

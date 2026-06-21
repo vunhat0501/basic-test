@@ -10356,6 +10356,19 @@
                 "answer": 0
             },
             {
+                "question": "Câu 9.62:\nRefer to the exhibit. What must be configured to enable 802.11w on the WLAN?",
+                "options": [
+                    "Set PMF to Required",
+                    "Enable MAC Filtering",
+                    "Enable WPA Policy",
+                    "Set Fast Transition to Enabled"
+                ],
+                "answer": 0,
+                "image": [
+                    "media/ccna/part-9/9.62.png"
+                ]
+            },
+            {
                 "question": "Câu 9.65:\nRefer to the exhibit. Which configuration establishes a Layer 2 LACP EtherChannel when applied to both switches?",
                 "options": [
                     "interface range G1/1 -1/3\nswitchport mode access\nchannel-group 1 mode passive\nno shutdown",
