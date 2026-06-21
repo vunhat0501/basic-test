@@ -3962,7 +3962,7 @@ B. G0/1
 C. G0/9
 D. G0/19
 
-Question 13.44: Refer to the exhibit. Which interface is used to send traffic to the destination network?
+Question 13.45: Refer to the exhibit. Which interface is used to send traffic to the destination network?
 A. G0/11
 _B. G0/20_
 C. G0/9

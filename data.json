@@ -14008,7 +14008,7 @@
                 ]
             },
             {
-                "question": "Câu 13.44:\nRefer to the exhibit. Which interface is used to send traffic to the destination network?",
+                "question": "Câu 13.45:\nRefer to the exhibit. Which interface is used to send traffic to the destination network?",
                 "options": [
                     "G0/11",
                     "G0/20",
@@ -14017,7 +14017,7 @@
                 ],
                 "answer": 1,
                 "image": [
-                    "media/ccna/part-13/13.44.png"
+                    "media/ccna/part-13/13.45.png"
                 ]
             },
             {
