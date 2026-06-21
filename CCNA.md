@@ -257,12 +257,6 @@ B. give it a value in the private VLAN range
 C. assign it as VLAN 1
 D. configure it as a different VLAN ID on each end of the link
 
-Question 5.43: How is the native VLAN secured in a network?
-_A. separate from other VLANs within the administrative domain_
-B. give it a value in the private VLAN range
-C. assign it as VLAN 1
-D. configure it as a different VLAN ID on each end of the link
-
 Question 5.44: Which command on a port enters the forwarding state immediately when a PC is connected to it?
 _A. switch(config)#spanning-tree portfast default_
 B. switch(config)#spanning-tree portfast bpduguard default
@@ -2480,7 +2474,7 @@ Question 10.72: Refer to the exhibit. Which router or router group are NTP clien
 _A. R1, R2, and R3_
 B. R1
 C. R2 and R3
-D R1, R3, and R4
+D. R1, R3, and R4
 
 Question 10.73: A network engineer is replacing the switches that belong to a managed-services client with new Cisco Catalyst switches. The new switches will be configured for updated security standards, including replacing Telnet services with encrypted connections and doubling the modulus size from 1024. Which two commands must the engineer configure on the new switches? (Choose two)
 _A. transport input ssh_

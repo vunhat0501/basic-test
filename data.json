@@ -7917,16 +7917,6 @@
                 "answer": 0
             },
             {
-                "question": "Câu 5.43:\nHow is the native VLAN secured in a network?",
-                "options": [
-                    "separate from other VLANs within the administrative domain",
-                    "give it a value in the private VLAN range",
-                    "assign it as VLAN 1",
-                    "configure it as a different VLAN ID on each end of the link"
-                ],
-                "answer": 0
-            },
-            {
                 "question": "Câu 5.44:\nWhich command on a port enters the forwarding state immediately when a PC is connected to it?",
                 "options": [
                     "switch(config)#spanning-tree portfast default",
@@ -11482,7 +11472,8 @@
                 "options": [
                     "R1, R2, and R3",
                     "R1",
-                    "R2 and R3\nD R1, R3, and R4"
+                    "R2 and R3",
+                    "R1, R3, and R4"
                 ],
                 "answer": 0,
                 "image": [
@@ -13894,7 +13885,8 @@
                 ],
                 "answer": 1,
                 "image": [
-                    "media/ccna/part-13/13.30.png"
+                    "media/ccna/part-13/13.30A.png",
+                    "media/ccna/part-13/13.30B.png"
                 ]
             },
             {
@@ -16918,7 +16910,8 @@
                 ],
                 "answer": 1,
                 "image": [
-                    "media/ccna/part-16/16.1.png"
+                    "media/ccna/part-16/16.1A.png",
+                    "media/ccna/part-16/16.1B.png"
                 ]
             },
             {

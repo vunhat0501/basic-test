@@ -41,7 +41,6 @@ def parse_standard(filepath, default_title):
                     opt = opt[:-1].strip()
                 cleaned_options.append(opt)
             
-            # --- KIỂM TRA LỖI (VALIDATION) ---
             is_valid = True
             error_reasons = []
             if len(cleaned_options) < 2:
@@ -58,7 +57,6 @@ def parse_standard(filepath, default_title):
                     "question": short_q,
                     "reasons": error_reasons
                 })
-            # ---------------------------------
             
             ans = current_answers[0] if len(current_answers) == 1 else current_answers.copy() if len(current_answers) > 1 else -1
             questions.append({"question": q_text, "options": cleaned_options, "answer": ans})
@@ -118,7 +116,6 @@ def parse_ccna(filepath, base_title):
     q_pattern = re.compile(r'^Question\s+((\d+)\.(\d+))[:\s]*(.*)', re.IGNORECASE)
     opt_pattern = re.compile(r'^\s*([_*]?)\s*[A-Z][\.\)]\s*(.*)$', re.IGNORECASE)
     
-    dual_image_qs = ["8.60", "9.85", "11.7", "12.8", "12.22", "12.61", "12.98"]
     valid_exts = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg']
 
     def check_and_get_image(base_path):
@@ -142,16 +139,16 @@ def parse_ccna(filepath, base_title):
             
             base_img_path = f"media/ccna/part-{current_part_num}/{current_q_num_str}"
             
-            if current_q_num_str in dual_image_qs:
-                imgA = check_and_get_image(f"{base_img_path}A")
-                imgB = check_and_get_image(f"{base_img_path}B")
+            # KIỂM TRA ĐỘNG (Dynamic Check) cho ảnh A và B
+            imgA = check_and_get_image(f"{base_img_path}A")
+            imgB = check_and_get_image(f"{base_img_path}B")
+            
+            if imgA or imgB:
                 imgs = []
                 if imgA: imgs.append(imgA)
                 if imgB: imgs.append(imgB)
-                
-                if imgs:
-                    q_obj["image"] = imgs
-                    images_found_count += len(imgs)
+                q_obj["image"] = imgs
+                images_found_count += len(imgs)
             else:
                 img_path = check_and_get_image(base_img_path)
                 if img_path:
@@ -176,7 +173,6 @@ def parse_ccna(filepath, base_title):
                 else:
                     cleaned_options.append(opt)
                     
-            # --- KIỂM TRA LỖI (VALIDATION) ---
             is_valid = True
             error_reasons = []
             if len(cleaned_options) < 2:
@@ -193,7 +189,6 @@ def parse_ccna(filepath, base_title):
                     "question": short_q,
                     "reasons": error_reasons
                 })
-            # ---------------------------------
 
             q_obj["options"] = cleaned_options
             if explanations: q_obj["explanations"] = explanations
@@ -269,7 +264,6 @@ if __name__ == "__main__":
     print(f"\nThành công! Đã tạo data.json gồm {len(all_exams)} đề thi và tổng cộng {total_q} câu hỏi.")
     print(f"Báo cáo CCNA: Đã tìm thấy và liên kết {img_count} file hình ảnh!")
     
-    # In ra báo cáo lỗi
     if all_unconverted:
         print(f"\n" + "="*80)
         print(f"CẢNH BÁO: Phát hiện {len(all_unconverted)} câu hỏi CÓ VẤN ĐỀ!")
@@ -279,6 +273,3 @@ if __name__ == "__main__":
             print(f"Nội dung: {item['question']}")
             print(f"Lỗi    : {', '.join(item['reasons'])}")
             print("-" * 80)
-        print("\n=> Vui lòng mở các file Markdown tương ứng và bổ sung đáp án đúng (thêm dấu * hoặc _) cho các câu trên!")
-    else:
-        print(f"Tuyệt vời! 100% câu hỏi từ tất cả các file đều đã nhận diện được phương án và đáp án đầy đủ.")
