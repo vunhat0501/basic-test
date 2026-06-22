@@ -2013,6 +2013,12 @@ R2(config)#ip route 192.168.0.100 255.255.255.255 10.10.10.1
 D. R1(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.6
 R2(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.5
 
+Question 9.100: What is a function performed by a web server?
+_A. provide an application that is transmitted over HTTP_
+B. send and retrieve email from client devices
+C. securely store files for FTP access
+D. authenticate and authorize a user’s identity
+
 Question 9.102: Which two wireless security standards use Counter Mode Cipher Block Chaining Message Authentication Code Protocol for encryption and data integrity? (Choose two)
 _A. WPA2_
 _B. WPA3_
@@ -3784,7 +3790,6 @@ B. modifies frames that contain a known source VLAN
 C. inspects and drops frames from unknown destinations
 _D. forwards known destinations to the destination port_
 
-Answer: D
 Question 13.5
 What is used as a solution for protecting an individual network endpoint from attack?
 A. Router

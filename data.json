@@ -10730,6 +10730,16 @@
                 ]
             },
             {
+                "question": "Câu 9.100:\nWhat is a function performed by a web server?",
+                "options": [
+                    "provide an application that is transmitted over HTTP",
+                    "send and retrieve email from client devices",
+                    "securely store files for FTP access",
+                    "authenticate and authorize a user’s identity"
+                ],
+                "answer": 0
+            },
+            {
                 "question": "Câu 9.102:\nWhich two wireless security standards use Counter Mode Cipher Block Chaining Message Authentication Code Protocol for encryption and data integrity? (CHOOSE TWO)",
                 "options": [
                     "WPA2",
@@ -13697,7 +13707,7 @@
                     "forwards frames to a neighbor port using CDP",
                     "modifies frames that contain a known source VLAN",
                     "inspects and drops frames from unknown destinations",
-                    "forwards known destinations to the destination port_\nAnswer: D"
+                    "forwards known destinations to the destination port"
                 ],
                 "answer": 3
             },
